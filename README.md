@@ -99,31 +99,31 @@
 #### 4. Operators and its types in php.
 
 
-- ##### Arithmetic (গাণিতিক অপারেটর) 
+- Arithmetic (গাণিতিক অপারেটর) 
 
   ``` 
    + ,  - ,  * ,  / ,  % (Modulus),  ** (Exponentiation)
   ```
 
-- ##### Assignment (নির্ধারণ অপারেটর).
+- Assignment (নির্ধারণ অপারেটর).
   
   ``` 
    =, +=, -=, *=, /=
   ```
 
-- ##### Comparison (তুলনা).
+- Comparison (তুলনা).
   
   ``` 
    ==, !=, ===, !==, < (less), > (greater), <=, >=
   ```
 
-- ##### Increment / decrement.
+- Increment / decrement.
   
   ``` 
   ++a, a++, --a, a-- 
   ```
 
-- ##### Logical and others.
+- Logical and others.
 
   ``` 
    !, &&, || 
