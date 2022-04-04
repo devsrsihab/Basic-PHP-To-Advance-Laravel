@@ -1,11 +1,11 @@
 # Basic PHP To Advance Laravel
 
-## Class-1 Overview
+### Class-1 Overview
 
 <details>
   <summary>Click Here</summary>
 
-1. Github
+1. Github.
 
 - What is Git & Github
 
