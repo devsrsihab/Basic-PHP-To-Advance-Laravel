@@ -66,8 +66,7 @@
    
    ``` 
    define(name, value, case-insensitive) 
-
-  ```
+   ```
 
 - Different between variable & constant.
 
@@ -104,35 +103,30 @@
 
   ``` 
    + ,  - ,  * ,  / ,  % (Modulus),  ** (Exponentiation)
-
   ```
 
 - ##### Assignment (নির্ধারণ অপারেটর).
   
   ``` 
    =, +=, -=, *=, /=
-
   ```
 
 - ##### Comparison (তুলনা).
   
   ``` 
    ==, !=, ===, !==, < (less), > (greater), <=, >=
-
   ```
 
 - ##### Increment / decrement.
   
   ``` 
   ++a, a++, --a, a-- 
-
   ```
 
 - ##### Logical and others.
 
   ``` 
    !, &&, || 
-
   ```
 
 
