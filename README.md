@@ -87,6 +87,53 @@
 
 - Null, Resource-.
 
-
-
   </details>
+
+
+
+### Class-3 Overview.
+
+<details>
+
+<summary> Click Here</summary>
+
+#### 4. Operators and its types in php.
+
+
+- ##### Arithmetic (গাণিতিক অপারেটর) 
+
+  ``` 
+   + ,  - ,  * ,  / ,  % (Modulus),  ** (Exponentiation)
+
+  ```
+
+- ##### Assignment (নির্ধারণ অপারেটর).
+  
+  ``` 
+   =, +=, -=, *=, /=
+
+  ```
+
+- ##### Comparison (তুলনা).
+  
+  ``` 
+   ==, !=, ===, !==, < (less), > (greater), <=, >=
+
+  ```
+
+- ##### Increment / decrement.
+  
+  ``` 
+  ++a, a++, --a, a-- 
+
+  ```
+
+- ##### Logical and others.
+
+  ``` 
+   !, &&, || 
+
+  ```
+
+
+ </details>
