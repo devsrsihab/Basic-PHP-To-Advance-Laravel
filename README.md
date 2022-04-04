@@ -7,18 +7,18 @@
 
 1. Github
 
-a.What is Git & Github
+-What is Git & Github
 
-b.Why need Git & Github
+-Why need Git & Github
 
-c.Git bash Downloads & Installation
+-Git bash Downloads & Installation
 
-d.Create an Account on Github
+-Create an Account on Github
 
-e.Create project Local to Online
+-Create project Local to Online
 
-f.Create Project Online
+-Create Project Online
 
-g.How to fork any github project from another account.
+-How to fork any github project from another account.
 
 </details>
