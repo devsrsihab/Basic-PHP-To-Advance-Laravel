@@ -96,7 +96,7 @@
 
 <summary> Click Here</summary>
 
-#### 4. Operators and its types in php.
+#### 1. Operators and its types in php.
 
 
 - Arithmetic (গাণিতিক অপারেটর) 
@@ -129,7 +129,7 @@
    !, &&, || 
   ```
 
- #### 4. Statements.
+ #### 1. Statements.
 
 - If
 
