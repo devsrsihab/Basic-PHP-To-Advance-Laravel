@@ -129,8 +129,6 @@
    !, &&, || 
   ```
 
- </details>
-
  #### 4. Statements.
 
 - If
@@ -140,3 +138,7 @@
 - Else if
 
 - Switch
+
+
+ </details>
+
