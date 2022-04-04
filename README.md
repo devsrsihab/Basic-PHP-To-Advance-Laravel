@@ -5,7 +5,7 @@
 <details>
   <summary>Click Here</summary>
 
-1. Github.
+#### 1. Github.
 
 - What is Git & Github
 
@@ -21,7 +21,7 @@
 
 - How to fork any github project from another account.
 
-2. IDE / Code Editor.
+#### 2. IDE / Code Editor.
 
  - Vs Code Downloads.
 
