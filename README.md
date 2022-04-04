@@ -62,8 +62,8 @@
 
 - Declaration rules of common variables.
 
-- Declaration rules of Constant variables.
-- - ``` define(name, value, case-insensitive) ``` .
+- Declaration rules of Constant variables
+ ``` define(name, value, case-insensitive) ``` .
 
 - Different between variable & constant.
 
