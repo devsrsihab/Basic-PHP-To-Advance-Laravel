@@ -33,4 +33,54 @@
 
 </details>
 
+
 ### Class-2 Overview
+<details>
+  <summary>Click Here</summary>
+
+  
+#### 1. PHP Language.
+
+- History of php.
+
+- How does php work.
+
+- Power of php.
+  
+#### 2. Environment setup, Code Structure & Run Code.
+
+- Server setup.
+
+- Code syntax & run code.
+
+- How to write Php code in html.
+
+#### 3.Variable.
+
+- What is Variable?.
+
+- Declaration rules of common variables.
+
+- Declaration rules of Constant variables.
+
+- Different between variable & constant.
+
+
+#### 4.Print Way.
+
+- Concat string, inverted comma.
+
+- echo, Printf, sprintf.
+
+
+#### 5.Different types of Data types.
+
+- Most commonly used scalar (মৌলিক) data types - (String, Integer, float, Boolean).
+
+- Compound (যৌগিক) data types - (Array, Object).
+
+- Null, Resource-.
+
+
+
+  </details>
