@@ -21,4 +21,16 @@
 
 - How to fork any github project from another account.
 
+2. IDE / Code Editor.
+
+ - Vs Code Downloads.
+
+ - Vs Code Editor keyboard shortcuts.
+  
+ - Important Package installation
+
+
+
 </details>
+
+### Class-2 Overview
