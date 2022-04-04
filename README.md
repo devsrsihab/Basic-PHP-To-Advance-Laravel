@@ -1,5 +1,6 @@
 # Basic PHP To Advance Laravel
 
+<!-- class-1 overview start -->
 ### Class-1 Overview.
 
 <details>
@@ -32,8 +33,9 @@
 
 
 </details>
+<!-- class-1 overview end -->
 
-
+<!-- class-2 overview start -->
 ### Class-2 Overview.
 
 <details>
@@ -87,9 +89,9 @@
 - Null, Resource-.
 
   </details>
+<!-- class-2 overview end -->
 
- <! --- (class three verview).
-
+<!-- class-3 overview start -->
 ### Class-3 Overview.
 
 <details>
@@ -141,4 +143,39 @@
 
 
  </details>
+<!-- class-3 overview end -->
 
+<!-- class-4 overview start -->
+### Class-4 Overview.
+
+<details>
+
+<summary> Click Here</summary>
+
+  1. Loop.
+   
+- Operator: Increment (++) and Decrement (--).    
+
+- For Loop.
+    ```
+    for ($x = 0; $x <= 10; $x++) {
+    echo "The number is: $x <br>";
+    } 
+    ```
+
+- While loop.
+    ```
+    $x = 1;
+    while($x <= 5) {
+    echo "The number is: $x <br>";
+    $x++;
+    } 
+    ```
+
+- Do while
+
+- Foreach
+
+
+</details>
+<!-- class-1 overview end -->
