@@ -18,7 +18,7 @@ for ($fac=$fac_number; $fac>=1; $fac--){
  
 $fac_end  *=  $fac;  
 
-echo "Factorial of $fac_number! =  6*5*4*3*2*1 = $fac_end <br> ";}  
+echo "Factorial of $fac_number! =  7*6*5*4*3*2*1 = $fac_end <br> ";}  
 //tast end 
 
 

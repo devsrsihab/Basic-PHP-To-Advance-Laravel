@@ -10,10 +10,13 @@
 
 //Not need to print even number
 
+
+
 //tast start
+
 echo   "<h2>This is 2nd Assignment </h2>";
 for ($n=0; $n <= 100; $n++) { 
-   
+
    if ($n % 2 !== 0) {
 
      echo "$n is A ODD Number <br>";
@@ -21,8 +24,29 @@ for ($n=0; $n <= 100; $n++) {
    };
 
 };
+
 //tast end
 
 
+// i have also made it with while loop
+// $n = 0;
+// while ($n <= 100) {
+//   # code...
+// if ($n%2!==0) {
+//   echo "$n is A Odd Number <br>";
+// }
+
+//   $n++;
+// }
+
+
+// i have also made it with do while loop
+// $n = 0;
+// do {
+//   if ($n%2!==0) {
+//       echo "$n is A Odd Number <br>";
+//     }
+//   $n++;
+// } while ($n <= 100);
 
 ?>
