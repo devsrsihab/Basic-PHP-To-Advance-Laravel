@@ -11,11 +11,11 @@
 
 //task start
 echo "<h2> This is First Assignment </h2>";
-$runningDate = date('Y-m-d'). "<br>" ;     //running date
+$runningDate = date('Y-m-d'). "<br>" ;       //running date
 echo "Current Date is " . $runningDate;
-$firstDay = date("d");
-$lastDay =  date("t");
-$monthName = date("M ");
+$firstDay = date("d");                     //first day of this running month
+$lastDay =  date("t");                    //last day of this running month
+$monthName = date("M ");                 //month name
 
 for ($i=$firstDay; $i <= $lastDay ; $i++) { 
 
