@@ -13,10 +13,10 @@ echo "<h2>This is 5th Assignment </h2>";
 
 $frutes = ['apple', 'orange', 'banana', 'mango'];   //frutes names
 
-foreach ($frutes as $key => $allFruites) {
+foreach ($frutes as $indexNumber => $allFruites) {
 
-$key++;
-echo " sl = $key And Product - $allFruites <br>";
+$indexNumber++;
+echo " sl = $indexNumber And Product - $allFruites <br>";
 
 }
 
