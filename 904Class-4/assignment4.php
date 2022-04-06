@@ -7,15 +7,9 @@
 
 
 //tast start
-
-$n =100;          //initial number 
-
-while ($n >= 1) {
-   
- echo $n . "<br>";
- $n--;
-}
-
+echo "<h2>This is 4th Assignment </h2>";
+$n =100; //initial number 
+while ($n >= 1) { echo $n . "<br>"; $n--;}
 //tast end
 
 ?>

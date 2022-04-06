@@ -8,15 +8,15 @@
 // Show all products as a table list.
 // Output should like that: “sl- 1 and product - apple”
 
+//tast start
+echo "<h2>This is 5th Assignment </h2>";
 
-$frutes = ['apple', 'orange', 'banana', 'mango'];
-$key = 1;
+$frutes = ['apple', 'orange', 'banana', 'mango'];   //frutes names
+
 foreach ($frutes as $key => $allFruites) {
 
 $key++;
-echo " sr = $key And Product - $allFruites <br>";
-
-
+echo " sl = $key And Product - $allFruites <br>";
 
 }
 

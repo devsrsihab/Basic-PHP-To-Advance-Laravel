@@ -10,16 +10,18 @@
 
 //Not need to print even number
 
-
+//tast start
+echo   "<h2>This is 2nd Assignment </h2>";
 for ($n=0; $n <= 100; $n++) { 
    
    if ($n % 2 !== 0) {
 
      echo "$n is A ODD Number <br>";
 
-   }
+   };
 
-}
+};
+//tast end
 
 
 
