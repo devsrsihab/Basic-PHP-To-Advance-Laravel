@@ -206,6 +206,7 @@
   1. #### break
 ```
    <?php
+   
     for ($x = 0; $x < 10; $x++) {
       if ($x == 4) {
         break;
@@ -220,6 +221,7 @@
 
 ```
     <?php
+
     for ($x = 0; $x < 10; $x++) {
       if ($x == 4) {
         continue;
@@ -232,6 +234,7 @@
 
 ```
     <?php
+
     $cars = ["Volvo", "BMW", "Toyota"];
     foreach($cars as $index => $value){
 
@@ -243,6 +246,7 @@
 
 ```
     <?php
+
     $age = ["Peter"=>"35", "Ben"=>"37", "Joe"=>"43"];
 
     foreach($age as $x => $x_value) {
@@ -256,6 +260,7 @@
 
 ```
       <?php 
+
       $student =
        [
           ["Johns",22,18],
