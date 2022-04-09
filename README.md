@@ -232,7 +232,7 @@
 
 ```
     <?php
-    $cars = array("Volvo", "BMW", "Toyota");
+    $cars = ["Volvo", "BMW", "Toyota"];
     foreach($cars as $index => $value){
 
       echo $index . $cars . "<br>";
@@ -240,10 +240,37 @@
     ?>
 ```
   4. #### Associative array.
+
+```
+    <?php
+    $age = ["Peter"=>"35", "Ben"=>"37", "Joe"=>"43"];
+
+    foreach($age as $x => $x_value) {
+      echo $x ." " . $x_value;
+      echo "<br>";
+    }
+    ?>
+```
   5. #### Multidimensional array.
 
 
+```
+      <?php 
+      $student =
+       [
+          ["Johns",22,18],
+          ["Rocky",15,13],
+          ["Mickl",5,2],
+          ["Crish",17,15]
+        ];
 
+        echo "Name: ".$student[0][0].". "."Age: ".$student[0][1].". ID No: ".$student[0][2].".<br>";
+        echo "Name: ".$student[1][0].". "."Age: ".$student[1][1].". ID No: ".$student[1][2].".<br>";
+        echo "Name: ".$student[2][0].". "."Age: ".$student[2][1].". ID No: ".$student[2][2].".<br>";
+        echo "Name: ".$student[3][0].". "."Age: ".$student[3][1].". ID No: ".$student[3][2].".<br>";
+    ?>
+
+```
 
 
 
