@@ -192,3 +192,26 @@
 
 </details>
 <!-- class-1 overview end -->
+
+<!-- class-4 overview start -->
+### Class-5 Overview.
+
+<details>
+
+<summary> Click Here</summary>
+
+  1. #### break.
+  2. #### continue.
+  3. #### Indexed array.
+  4. #### Associative array.
+  5. #### Multidimensional array.
+
+
+
+
+
+
+
+
+
+</details>
