@@ -205,12 +205,14 @@
 
   1. #### break
 ```
+   <?php
     for ($x = 0; $x < 10; $x++) {
       if ($x == 4) {
         break;
       }
       echo "The number is: $x <br>";
     }
+    ?>
 ```
 
 
@@ -227,6 +229,16 @@
     ?>
 ```
   3. #### Indexed array.
+
+```
+    <?php
+    $cars = array("Volvo", "BMW", "Toyota");
+    foreach($cars as $index => $value){
+
+      echo $index . $cars . "<br>";
+    }
+    ?>
+```
   4. #### Associative array.
   5. #### Multidimensional array.
 
