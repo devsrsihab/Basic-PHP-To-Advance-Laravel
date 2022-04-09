@@ -213,7 +213,7 @@
       echo "The number is: $x <br>";
     }
     ```
-  2. #### continue.
+  2. continue.
   3. #### Indexed array.
   4. #### Associative array.
   5. #### Multidimensional array.
