@@ -215,6 +215,17 @@
 
 
   2. #### continue.
+
+```
+    <?php
+    for ($x = 0; $x < 10; $x++) {
+      if ($x == 4) {
+        continue;
+      }
+      echo "The number is: $x <br>";
+    }
+    ?>
+```
   3. #### Indexed array.
   4. #### Associative array.
   5. #### Multidimensional array.
