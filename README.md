@@ -203,19 +203,18 @@
 
 <summary> Click Here</summary>
 
-  1. #### break.
-
-    ```
+  1. #### break
+```
     for ($x = 0; $x < 10; $x++) {
       if ($x == 4) {
         break;
       }
       echo "The number is: $x <br>";
     }
+```
 
-    ```
 
-  2. continue.
+  2. #### continue.
   3. #### Indexed array.
   4. #### Associative array.
   5. #### Multidimensional array.
