@@ -4,7 +4,7 @@
 
 
 <!-- class-1 overview start -->
-### Class-1 Overview.
+### Class-1 Overview
 
 <details>
   <summary>Click Here</summary>
@@ -39,7 +39,7 @@
 <!-- class-1 overview end -->
 
 <!-- class-2 overview start -->
-### Class-2 Overview.
+### Class-2 Overview
 
 <details>
 
@@ -95,7 +95,7 @@
 <!-- class-2 overview end -->
 
 <!-- class-3 overview start -->
-### Class-3 Overview.
+### Class-3 Overview
 
 <details>
 
@@ -149,7 +149,7 @@
 <!-- class-3 overview end -->
 
 <!-- class-4 overview start -->
-### Class-4 Overview.
+### Class-4 Overview
 
 <details>
 
@@ -197,7 +197,7 @@
 <!-- class-1 overview end -->
 
 <!-- class-4 overview start -->
-### Class-5 Overview.
+### Class-5 Overview
 
 <details>
 
