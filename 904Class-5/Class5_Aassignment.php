@@ -13,11 +13,14 @@
 
 //formula is begin from here
 echo "<h2>Assignment 1. </h2>";
-$myArry = [12,34,2,6,78, 4, 7, 13, 17];
+//array value
+$myArry =[12,34,2,6,78];
 
+//foreach start
 foreach($myArry as $key => $value){
     
-        $num = $value;
+        //initialize the $value in $num
+        $num = $value; 
         $n = 0;
 
     for($i = 2; $i < $num; $i++) {
@@ -27,13 +30,14 @@ foreach($myArry as $key => $value){
      }
     }
     if ($n == 0 ){
-    echo $num." prime number. <br/>";
+    echo $num." prime number. <br/>";  
     }else{
      continue;
         
     }
     
 }
+//foreach end
 echo "<hr>";
 
 //============================
@@ -86,14 +90,14 @@ foreach ($myArrayTwo as $key => $val)
         $amount1 = $val;
     }
 }
-echo "Method One " .$amount1 . "<br>";
+echo "HIghest Value is " .$amount1 . "<br>";
 
 
 // i have also try without any loop
 // $myArray = [0,10,80,67,60,89,91,56,45,30,95,83,99];
 // foreach ($myArray as $key => $value) {
   
-//     echo "Method Two ".  max($myArray). "<br>";
+//     echo "HIghest Value is ".  max($myArray). "<br>";
 //     break;
  
 //  }
@@ -111,7 +115,7 @@ echo "Method One " .$amount1 . "<br>";
   
 // }
 
-// echo "Method Three " . $amount2;
+// echo "HIghest Value is " . $amount2;
 
 echo "<hr>";
 
