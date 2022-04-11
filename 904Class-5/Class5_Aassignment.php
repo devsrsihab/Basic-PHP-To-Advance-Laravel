@@ -21,15 +21,15 @@ foreach($myArry as $key => $value){
     
         //initialize the $value in $num
         $num = $value; 
-        $n = 0;
+        $flag = 0;
 
     for($i = 2; $i < $num; $i++) {
         if($num % $i == 0){
-            $n++;
+            $flag++;
             break;
      }
     }
-    if ($n == 0 ){
+    if ($flag == 0 ){
     echo $num." prime number. <br/>";  
     }else{
      continue;
