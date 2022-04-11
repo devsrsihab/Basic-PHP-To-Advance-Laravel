@@ -13,9 +13,8 @@
 
 //formula is begin from here
 echo "<h2>Assignment 1 </h2>";
-//array value
-$myArry =[12,34,2,6,78];
-
+//Indexed array
+$myArry = [12,34,2,6,78];
 //foreach start
 foreach($myArry as $key => $value){
     
@@ -50,6 +49,8 @@ echo "<hr>";
 // Must mention Which type of array you have made.
 
 echo "<h2>Assignment 2</h2>";
+
+$array = ['sohan','asik', 'rhoim'];
 $mobiles = [
 
             ['realme 91','8GB','18GB','18,774'],
@@ -62,9 +63,7 @@ $mobiles = [
 
 echo" Brand Name: "." ".  $mobiles[0][0]. " RAM: ".$mobiles[0][1]. " ROM: ". $mobiles[0][2]. " Price: ". $mobiles[0][3]. "<br>";
 echo" Brand Name: "." ".  $mobiles[1][0]. " RAM: ".$mobiles[1][1]. " ROM: ". $mobiles[1][2]. " Price: ". $mobiles[1][3]. "<br>";
-echo" Brand Name: "." ".  $mobiles[2][0]. " RAM: ".$mobiles[2][1]. " ROM: ". $mobiles[2][2]. " Price: ". $mobiles[2][3]. "<br>";
-echo" Brand Name: "." ".  $mobiles[3][0]. " RAM: ".$mobiles[3][1]. " ROM: ". $mobiles[3][2]. " Price: ". $mobiles[3][3]. "<br>";
-echo" Brand Name: "." ".  $mobiles[4][0]. " RAM: ".$mobiles[4][1]. " ROM: ". $mobiles[4][2]. " Price: ". $mobiles[4][3]. "<br>";
+
 
 echo "<hr>";
 
@@ -84,6 +83,7 @@ echo "<h2>Assignment 3</h2>";
 
 $myArrayTwo = [0,10,80,67,60,89,91,56,45,30,95,83,99];
 $amount1 = 0;
+
 foreach ($myArrayTwo as $key => $val)
  {
     if ($val > $amount1) {
@@ -131,7 +131,7 @@ $srTrav = [0,10,80,67,60,89,91,56,45,30,95,83,99];
 foreach ($srTrav as $index => $val) {
    
 
-    if ($index%2 !==0) {
+    if ($index%2 !== 0) {
 
         continue;
     }
