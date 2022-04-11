@@ -43,7 +43,7 @@ echo "<hr>";
 //============================
 // Question 02: 
 //============================
-// 	Let’s think about a use case, Daraz admin’s have some products for uploads on their e-commerce site. So make an array of products which contains 5 products.
+//Let’s think about a use case, Daraz admin’s have some products for uploads on their e-commerce site. So make an array of products which contains 5 products.
 
 // Go to daraz website and pick any 5 products and make your array.
 
