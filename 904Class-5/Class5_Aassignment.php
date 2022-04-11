@@ -12,7 +12,7 @@
 
 
 //formula is begin from here
-echo "<h2>Assignment 1. </h2>";
+echo "<h2>Assignment 1 </h2>";
 //array value
 $myArry =[12,34,2,6,78];
 
@@ -49,7 +49,7 @@ echo "<hr>";
 
 // Must mention Which type of array you have made.
 
-echo "<h2>Assignment 1</h2>";
+echo "<h2>Assignment 2</h2>";
 $mobiles = [
 
             ['realme 91','8GB','18GB','18,774'],
