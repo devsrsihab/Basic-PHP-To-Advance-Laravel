@@ -14,7 +14,7 @@
 //formula is begin from here
 echo "<h2>Assignment 1 </h2>";
 //Indexed array
-$myArry = [12,34,2,6,78];
+$myArry = [12,34,2,6,78,45,95];
 //foreach start
 foreach($myArry as $key => $value){
     
@@ -63,6 +63,9 @@ $mobiles = [
 
 echo" Brand Name: "." ".  $mobiles[0][0]. " RAM: ".$mobiles[0][1]. " ROM: ". $mobiles[0][2]. " Price: ". $mobiles[0][3]. "<br>";
 echo" Brand Name: "." ".  $mobiles[1][0]. " RAM: ".$mobiles[1][1]. " ROM: ". $mobiles[1][2]. " Price: ". $mobiles[1][3]. "<br>";
+echo" Brand Name: "." ".  $mobiles[2][0]. " RAM: ".$mobiles[2][1]. " ROM: ". $mobiles[2][2]. " Price: ". $mobiles[2][3]. "<br>";
+echo" Brand Name: "." ".  $mobiles[3][0]. " RAM: ".$mobiles[3][1]. " ROM: ". $mobiles[3][2]. " Price: ". $mobiles[3][3]. "<br>";
+echo" Brand Name: "." ".  $mobiles[4][0]. " RAM: ".$mobiles[4][1]. " ROM: ". $mobiles[4][2]. " Price: ". $mobiles[4][3]. "<br>";
 
 
 echo "<hr>";
