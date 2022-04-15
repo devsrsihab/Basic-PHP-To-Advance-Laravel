@@ -289,7 +289,13 @@
 
   1. #### Array Bulding Function
 
- - count(which_array), sizeof(which_array)
+ - count(which_array), sizeof(which_array).
+ ```
+   <?php
+    $cars=array("Volvo","BMW","Toyota");
+    echo sizeof($cars);
+    ?>
+ ```
  - max(which_array), min(which_array)
  - in_array(which_you_want_search, from_which_array, strict_mode)
  - array_search(which_you_want_search, from_which_array)
