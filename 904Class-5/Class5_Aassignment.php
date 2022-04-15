@@ -39,6 +39,7 @@ foreach($myArry as $key => $value){
 //foreach end
 echo "<hr>";
 
+
 //============================
 // Question 02: 
 //============================
