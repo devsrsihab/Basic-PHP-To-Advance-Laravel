@@ -363,23 +363,71 @@
     ?>
    ```
  - array_merge(all_arrays) - make a new array by merging multiple array
- - array_slice(from_which_array, from_index, total_element) - make a new array by taking some element from an array.
- - array_splice(from_which_array, from_index, total_element) - remove array element from an this array
- - array_diff(first_array, second_array)
- - array_unique(which_array)
- - array_sum(which_array)
+   ```
+    <?php
 
+    $a1=array("red","green");
+    $a2=array("blue","yellow");
+    echo "<pre>";
+    print_r(array_merge($a1,$a2));
+    echo "</pre>";
 
-```
-   <?php
-   
-    for ($x = 0; $x < 10; $x++) {
-      if ($x == 4) {
-        break;
-      }
-      echo "The number is: $x <br>";
-    }
     ?>
-```
+   ```
+ - array_slice(from_which_array, from_index, total_element) - make a new array by taking some element from an array.
+   ```
+    <?php
+
+    $$a=array("red","green","blue","yellow","brown");
+    echo "<pre>";
+    print_r(array_slice($a,1,2));
+    echo "</pre>";
+
+    ?>
+   ```
+ - array_splice(from_which_array, from_index, total_element) - remove array element from an this array
+   ```
+    <?php
+
+    $a1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
+    $a2=array("a"=>"purple","b"=>"orange");
+    array_splice($a1,0,2,$a2);
+    echo "<pre>";
+    print_r($a1);
+    echo "</pre>";
+
+    ?>
+   ```
+ - array_diff(first_array, second_array)
+   ```
+    <?php
+
+    $a1=array("a"=>"red","b"=>"green","c"=>"blue","d"=>"yellow");
+    $a2=array("e"=>"red","f"=>"green","g"=>"blue");
+
+    $result=array_diff($a1,$a2);
+    print_r($result);
+
+    ?>
+   ```
+ - array_unique(which_array)
+   ```
+    <?php
+
+    $a=array("a"=>"red","b"=>"green","c"=>"red");
+    print_r(array_unique($a));
+
+    ?>
+   ```
+ - array_sum(which_array)
+   ```
+    <?php
+
+   $a=array(5,15,25);
+   echo array_sum($a);
+
+    ?>
+   ```
+
 </details>
 <!-- class-6 overview end -->
