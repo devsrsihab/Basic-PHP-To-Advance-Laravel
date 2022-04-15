@@ -294,10 +294,10 @@
    <?php
     $cars=array("Volvo","BMW","Toyota");
     echo count($cars);
-    ?>
-   <?php
+   
     $cars=array("Volvo","BMW","Toyota");
     echo sizeof($cars);
+    
     ?>
  ```
  - max(which_array), min(which_array)
