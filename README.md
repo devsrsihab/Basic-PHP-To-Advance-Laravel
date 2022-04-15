@@ -293,6 +293,10 @@
  ```
    <?php
     $cars=array("Volvo","BMW","Toyota");
+    echo count($cars);
+    ?>
+   <?php
+    $cars=array("Volvo","BMW","Toyota");
     echo sizeof($cars);
     ?>
  ```
