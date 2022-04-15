@@ -309,8 +309,8 @@
     echo(min(array(4,6,8,10)) . "<br>");
     echo(min(array(44,16,81,12)));
 
-    ?>
-  ```
+     ?>
+   ```
  - in_array(which_you_want_search, from_which_array, strict_mode)
    ```
    <?php
@@ -327,7 +327,7 @@
       }
 
     ?>
-  ```
+   ```
  - array_search(which_you_want_search, from_which_array)
    ```
    <?php
@@ -336,9 +336,9 @@
    echo array_search("red",$a);
 
     ?>
-  ```
+   ```
  - array_pop(from_which_array) - for delete last element
-    ```
+   ```
    <?php
 
    $a=array("red","green","blue");
@@ -348,9 +348,9 @@
     echo "</pre>";
 
     ?>
-  ```
+   ```
  - array_push(which_array, new_value) - add element on last
-    ```
+   ```
     <?php
 
    $a=array("red","green","blue");
@@ -361,7 +361,7 @@
     echo "</pre>";
 
     ?>
-  ```
+   ```
  - array_merge(all_arrays) - make a new array by merging multiple array
  - array_slice(from_which_array, from_index, total_element) - make a new array by taking some element from an array.
  - array_splice(from_which_array, from_index, total_element) - remove array element from an this array
