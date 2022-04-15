@@ -196,7 +196,7 @@
 </details>
 <!-- class-1 overview end -->
 
-<!-- class-4 overview start -->
+`<!-- class-5 overview start -->
 ### Class-5 Overview
 
 <details>
@@ -215,7 +215,7 @@
     }
     ?>
 ```
-
+`
 
   2. #### continue.
 
@@ -277,9 +277,26 @@
 
 ```
 
+</details>
+<!-- class 5 is end -->
 
+<!-- class-6 overview start -->
+### Class-6 Overview
 
+<details>
 
+<summary> Click Here</summary>
 
-
+  1. #### break
+```
+   <?php
+   
+    for ($x = 0; $x < 10; $x++) {
+      if ($x == 4) {
+        break;
+      }
+      echo "The number is: $x <br>";
+    }
+    ?>
+```
 </details>
