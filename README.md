@@ -297,11 +297,37 @@
    
     $cars=array("Volvo","BMW","Toyota");
     echo sizeof($cars);
-    
+
     ?>
  ```
  - max(which_array), min(which_array)
+  ```
+   <?php
+
+    echo(max(2,4,6,8,10) . "<br>");
+    echo(max(22,14,68,18,15) . "<br>");
+    echo(min(array(4,6,8,10)) . "<br>");
+    echo(min(array(44,16,81,12)));
+
+    ?>
+  ```
  - in_array(which_you_want_search, from_which_array, strict_mode)
+   ```
+   <?php
+
+    $people = array("Peter", "Joe", "Glenn", "Cleveland");
+
+    if (in_array("Glenn", $people))
+      {
+      echo "Match found";
+      }
+    else
+      {
+      echo "Match not found";
+      }
+
+    ?>
+  ```
  - array_search(which_you_want_search, from_which_array)
  - array_pop(from_which_array) - for delete last element
  - array_push(which_array, new_value) - add element on last
