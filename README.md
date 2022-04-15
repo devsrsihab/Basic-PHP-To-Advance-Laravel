@@ -153,9 +153,9 @@
 
 <details>
 
-<summary> Click Here</summary>
+<summary>Click Here</summary>
 
-  1. #### Loop.
+  1. #### Loop
    
 - Operator: Increment (++) and Decrement (--).    
 
