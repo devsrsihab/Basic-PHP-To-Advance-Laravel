@@ -58,7 +58,7 @@ echo "<b>The Emails:</b> ";
 foreach ($total_email as $key => $value) {
    echo $value . " , ";
 }
-
+ 
 echo "<hr>"; 
 
 
