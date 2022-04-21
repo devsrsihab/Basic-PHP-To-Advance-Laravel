@@ -494,6 +494,8 @@
   print_r (explode(" ",$str));
   ?>
   ```
-
+  2. ### Write php code on html
+  3. ### Project based on array
+   - Mini Project - Product List (table/E-commerce)
 
 <!-- class-7 overview end -->
