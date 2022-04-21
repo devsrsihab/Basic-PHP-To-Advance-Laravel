@@ -431,3 +431,21 @@
 
 </details>
 <!-- class-6 overview end -->
+<!-- class-7 overview start -->
+
+### Class-6 Overview
+
+<details>
+
+<summary> Click Here</summary>
+
+   ## More Array functions
+  1. #### array_rand(from_which_array, how_many_element) - pick random keys
+  2. #### shuffle(which_array) - randomize order of array elements
+  3. #### array_chunk(which_array, how_many_element, keys_sequence) - Split an array into chunks
+  4. #### asort(which_array, sort_rule) - sort ascending order, arsort(which_array, sort_rule) - sort descending order,
+  5. #### ksort(which_array, sort_rule) - sort keys by ascending order, krsort() - sort keys by descending order
+  6. #### explode(separator_symble, which_string, element_limit) - String to array
+
+
+<!-- class-7 overview end -->
