@@ -439,7 +439,7 @@
 
 <summary> Click Here</summary>
 
-   ## More Array functions
+  1. ### More Array functions
   1. #### array_rand(from_which_array, how_many_element) - pick random keys
   ```
   <?php
