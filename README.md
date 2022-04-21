@@ -449,12 +449,51 @@
   echo $a[$random_keys[1]]."<br>";
   echo $a[$random_keys[2]];
   ?>
- ```
+  ```
   2. #### shuffle(which_array) - randomize order of array elements
+  ```
+  <?php
+  $my_array = array("red","green","blue","yellow","purple");
+
+  shuffle($my_array);
+  print_r($my_array);
+  ?>
+  ```
   3. #### array_chunk(which_array, how_many_element, keys_sequence) - Split an array into chunks
+  ```
+  <?php
+  $cars=array("Volvo","BMW","Toyota","Honda","Mercedes","Opel");
+  print_r(array_chunk($cars,2));
+  ?>
+  ```
   4. #### asort(which_array, sort_rule) - sort ascending order, arsort(which_array, sort_rule) - sort descending order,
+  ```
+  <?php
+  $age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+  asort($age);
+  ?>
+  ```
   5. #### ksort(which_array, sort_rule) - sort keys by ascending order, krsort() - sort keys by descending order
+  ```
+  <?php
+  $age=array("Peter"=>"35","Ben"=>"37","Joe"=>"43");
+  ksort($age);
+  ?>
+  ```
   6. #### explode(separator_symble, which_string, element_limit) - String to array
+  ```
+  <?php
+  $str = "Hello world. It's a beautiful day.";
+  print_r (explode(" ",$str));
+  ?>
+  ```
+  7. #### explode(separator_symble, which_string, element_limit) - String to array
+  ```
+  <?php
+  $str = "Hello world. It's a beautiful day.";
+  print_r (explode(" ",$str));
+  ?>
+  ```
 
 
 <!-- class-7 overview end -->
