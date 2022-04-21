@@ -496,6 +496,6 @@
   ```
   2. ### Write php code on html
   3. ### Project based on array
-     * Mini Project - Product List (table/E-commerce)
+  3. ### Mini Project - Product List (table/E-commerce)
 
 <!-- class-7 overview end -->
