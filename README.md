@@ -433,7 +433,7 @@
 <!-- class-6 overview end -->
 <!-- class-7 overview start -->
 
-### Class-6 Overview
+### Class-7 Overview
 
 <details>
 
