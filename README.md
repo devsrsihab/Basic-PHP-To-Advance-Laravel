@@ -441,6 +441,15 @@
 
    ## More Array functions
   1. #### array_rand(from_which_array, how_many_element) - pick random keys
+  ```
+  <?php
+  $a=array("red","green","blue","yellow","brown");
+  $random_keys=array_rand($a,3);
+  echo $a[$random_keys[0]]."<br>";
+  echo $a[$random_keys[1]]."<br>";
+  echo $a[$random_keys[2]];
+  ?>
+ ```
   2. #### shuffle(which_array) - randomize order of array elements
   3. #### array_chunk(which_array, how_many_element, keys_sequence) - Split an array into chunks
   4. #### asort(which_array, sort_rule) - sort ascending order, arsort(which_array, sort_rule) - sort descending order,
