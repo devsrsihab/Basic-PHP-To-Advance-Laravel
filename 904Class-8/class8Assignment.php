@@ -10,56 +10,63 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <style>
-      /* assignment 3 style */
-       f {color: red;}
-       b {font-weight: 600;}
+    /* assignment 3 style */
+    f {
+        color: red;
+    }
 
-       /* assignment 4 style */
-       .card-body {
-            background-color: #eee;
-        }
+    b {
+        font-weight: 600;
+    }
 
-        .bto {
-            background-image: url('img/insm.svg') !important;
-        }
+    /* assignment 4 style */
+    .card-body {
+        background-color: #eee;
+    }
 
-        input.button {
-            color: white;
-            padding: 11px 37px;
-            background: #336699;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            line-height: 1;
-            outline: none;
-            border: none;
-            margin-left: 14.5rem;
-            margin-top: 1rem;
-        }
-        /* assignment 4 style */
-        high {
-            color: #ff5151;
-            font-weight: 700;
-        }
+    .bto {
+        background-image: url('img/insm.svg') !important;
+    }
 
-        overw {
-            color: #ffd455;
-            font-weight: 700;
-        }
+    input.button {
+        color: white;
+        padding: 11px 37px;
+        background: #336699;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        line-height: 1;
+        outline: none;
+        border: none;
+        margin-left: 14.5rem;
+        margin-top: 1rem;
+    }
 
-        thinw {
-            color: #7eedff;
-            font-weight: 700;
-        }
+    /* assignment 4 style */
+    high {
+        color: #ff5151;
+        font-weight: 700;
+    }
 
-        normalw {
-            color: #8eff8c;
-            font-weight: 700;
-        }
+    overw {
+        color: #ffd455;
+        font-weight: 700;
+    }
 
-        tr.bmi-sms-row {
-            background: #3c3c3c;
-        }
+    thinw {
+        color: #7eedff;
+        font-weight: 700;
+    }
+
+    normalw {
+        color: #8eff8c;
+        font-weight: 700;
+    }
+
+    tr.bmi-sms-row {
+        background: #3c3c3c;
+    }
 </style>
+
 <body>
 
     <?php 
@@ -728,7 +735,7 @@ else{
 
 
                 </form>
-             <!-- form end -->
+                <!-- form end -->
             </div>
         </div>
         <!-- form body end -->
@@ -845,7 +852,7 @@ else{
                             <label class="h6 form-label" for="to">To</label>
                             <select class="form-control" name="to" id="to" required>
                                 <option value="USD" selected>Select</option>
-                                <option value="USD" >USD- US Dollar</option>
+                                <option value="USD">USD- US Dollar</option>
                                 <option value="EUR">EUR- Euro</option>
                                 <option value="CAD">CAD- Canadian Dollar</option>
                                 <option value="INR">INR- Indian Rupee</option>
