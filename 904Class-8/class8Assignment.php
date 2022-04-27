@@ -10,10 +10,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <style>
-
-
-
-
       /* assignment 3 style */
        f {color: red;}
        b {font-weight: 600;}
@@ -67,7 +63,6 @@
 <body>
 
     <?php 
-
 //===========Assignment 1 code===================
     //disabled error messages
     error_reporting(0);
@@ -118,7 +113,6 @@ function ageDeff2($storage_age2){
 }
 
 //===========Assignment 2 code===================
-
 $height = $_POST['height'];
 $lenth  = $_POST['lenth'];
 $value  = $_POST['value'];
@@ -130,7 +124,6 @@ $lenth = intval($lenth);
 $value = intval($value);
 $width = intval($width);
 $base = intval($base);
-
 
 function area_rectangle($width,$lenth){
 
@@ -155,6 +148,7 @@ function area_square($value){
 
 
 }
+
 //===========Assignment 3 code===================
 $s_name = $_POST['sname'];
     $ban    = $_POST['ban'];
@@ -173,8 +167,6 @@ $s_name = $_POST['sname'];
 
     $final_total_mark = array_sum($final_val);
     $avgmark = $final_total_mark/6;
-
-
 
    if($_POST['ban'] < 33 || $_POST['eng'] < 33 || $_POST['mat'] < 33 || $_POST['sci'] < 33 || $_POST['phy'] < 33 || $_POST['che'] < 33 )
     {
@@ -233,7 +225,6 @@ return sprintf('%d years, %d month, %d days', $diff->y, $diff->m, $diff->d);
 //bmi formula as my var $weight/$height^2
 // 1 inch = 0.0254 m
 // 1 feet = 12 inch
-
 $feet = $_POST['feet'];
 $inch = $_POST['inch'];
 $weight = $_POST['weight'];
@@ -245,8 +236,6 @@ $height_to_meter = $height_to_inch*0.0254;
 $height_to_squar = pow($height_to_meter, 2);
 $height_to_squar2 = floatval($height_to_squar);
 $bmi = $weight+$height_to_squar;
-
-
 
 //bmi function
 function bmi($bmi){
@@ -282,8 +271,7 @@ function bmiSms($bmiS){
     }
 }
  
-//===========Assignment 5 code===================
-
+//===========Assignment 6 code===================
 
 $ConverTo = $_POST['to'];
 $amount = $_POST['amount'];
@@ -315,10 +303,6 @@ else{
     return "Please Select the Right Currency ";
 }
 }
-
-
-
-
 
 ?>
 
