@@ -23,22 +23,21 @@
 
     <?php 
 
-error_reporting(0);
-$s_name = $_POST['sname'];
-$ban = $_POST['ban'];
-$eng = $_POST['eng'];
-$mat = $_POST['mat'];
-$sci = $_POST['sci'];
-$phy = $_POST['phy'];
-$che = $_POST['che'];
-$total_mark = $ban + $eng + $mat + $sci + $phy + $che;
-$avgMark = $total_mark/6;
+
+    $s_name = $_POST['sname'];
+    $ban    = $_POST['ban'];
+    $eng    = $_POST['eng'];
+    $mat    = $_POST['mat'];
+    $sci    = $_POST['sci'];
+    $phy    = $_POST['phy'];
+    $che    = $_POST['che'];
+    $total_mark = $ban + $eng + $mat + $sci + $phy + $che;
+    $avgMark = $total_mark/6;
     // $all_sub_val = $ban . $eng  . $mat  . $sci . $phy  . $che;
     // $avgMark = $total_mark/6;
     // echo $avgMark . "<br>";
 
-
-function exam_result($final_val){
+   function exam_result($final_val){
 
     $final_total_mark = array_sum($final_val);
     $avgmark = $final_total_mark/6;
@@ -86,10 +85,10 @@ function exam_result($final_val){
 
 
 
+    <!-- ==================Assignment 3 start======================= -->
     <!-- // GPA function for result publishing -->
-    <h2 class="text-center ">Assignment 3</h2>
     <div class="container">
-
+        <h2 class="text-center ">Assignment 3</h2>
         <div class="row">
             <div class="col-md-6">
                 <table class=" m-auto table table-striped">
@@ -170,8 +169,9 @@ function exam_result($final_val){
                         <!-- result section -->
                         <div class="card">
                             <div class="card-heading">
-                                <h4 class="text-success"><span class="text-dark">Your Result:</span><?php echo exam_result([$_POST['ban'],$_POST['eng'],$_POST['mat'],$_POST['sci'],$_POST['phy'],$_POST['che'] ]);
- ?></h4>
+                                <h4 class="text-success"><span class="text-dark">Your
+                                        Result:</span><?php echo exam_result([$_POST['ban'],$_POST['eng'],$_POST['mat'],$_POST['sci'],$_POST['phy'],$_POST['che'] ]);?>
+                                </h4>
                             </div>
                         </div>
                     </div>
@@ -180,10 +180,10 @@ function exam_result($final_val){
             </div>
 
             <div class="col-md-6 mt-5">
-         
+
                 <form action="" method="post">
-                <div class="row px-3">
-                <div class="col-md-8">
+                    <div class="row px-3">
+                        <div class="col-md-8">
                             <!-- 1st sub -->
                             <div class="form-group pb-3">
                                 <label class=" control-label h5 " for="sname">Your Full Name</label>
@@ -191,7 +191,7 @@ function exam_result($final_val){
                                     placeholder="Type Your Full Name" required>
                             </div>
                         </div>
-                </div>
+                    </div>
                     <div class="row px-3">
                         <!-- col-md-4 start -->
                         <div class="col-md-4">
@@ -253,13 +253,8 @@ function exam_result($final_val){
             </div>
         </div>
 
-
-
-
-
-
     </div>
-    </div>
+    <!-- ==================Assignment 3 end======================= -->
 
 </body>
 

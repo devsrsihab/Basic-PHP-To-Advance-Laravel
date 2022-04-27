@@ -101,7 +101,7 @@ function ageDeff2($storage_age2){
         </form>
     </div>
 <!-- ===============1st way end===============  -->
-<!-- ===============3nd way start===============  -->
+<!-- ===============2nd way start===============  -->
     <h2 class="page-header text-center text-danger">Another</h2>
     <div class="container mt-2">
         <h4 class=" text-center" for="">Choose You Age</h4>
@@ -133,7 +133,7 @@ function ageDeff2($storage_age2){
 
 
     </div>
-<!-- ===============3nd way end===============  -->
+<!-- ===============2nd way end===============  -->
 </body>
 
 </html>

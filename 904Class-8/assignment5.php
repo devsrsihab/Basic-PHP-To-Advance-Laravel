@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         high {
-            color: #dc3545;
+            color: #ff5151;
             font-weight: 700;
         }
 
@@ -18,14 +18,17 @@
             color: #ffd455;
             font-weight: 700;
         }
-        thinw{
-            color: #17a2b8;
+
+        thinw {
+            color: #7eedff;
             font-weight: 700;
         }
-        normalw{
-            color: #fff;
+
+        normalw {
+            color: #8eff8c;
             font-weight: 700;
         }
+
         tr.bmi-sms-row {
             background: #3c3c3c;
         }
@@ -36,7 +39,7 @@
 //bmi formula as my var $weight/$height^2
 // 1 inch = 0.0254 m
 // 1 feet = 12 inch
-error_reporting();
+
 $feet = $_POST['feet'];
 $inch = $_POST['inch'];
 $weight = $_POST['weight'];
@@ -46,7 +49,14 @@ $height = floatval($height);
 $height_to_inch = $height*12;
 $height_to_meter = $height_to_inch*0.0254;
 $height_to_squar = pow($height_to_meter, 2);
-$bmi = $weight/$height_to_squar;
+// $bmi = $weight/$height_to_squar."\n";
+echo $height."<br>";
+echo $weight."<br>";
+$height2 = $height_to_meter*$height_to_meter;
+echo $height2."<br>";
+$bmi = $weight/$height2;
+echo $bmi."<br>";
+
 
 //bmi function
 function bmi($bmi){
@@ -91,13 +101,11 @@ function bmiSms($bmiS){
 ?>
 
 <body>
-    <form action="" method="post">
-        <div class="container ">
+    <div class="container ">
+    <h2 claass="text-center">Assignment 5</h2>
+        <form action="" method="post">
             <div class="row justify-content-center mt-5">
-                <div class="text-center">
-                    <h2 claass="text-success">Assignment 5</h2>
-                </div>
-
+        
                 <div class="col-md-5">
                     <table class="table table-striped">
                         <thead>
@@ -128,26 +136,42 @@ function bmiSms($bmiS){
                     </table>
                 </div>
                 <div class="col-md-6">
+                    <div class="row g-0">
+                        <label class="h6" for="height">Type Height</label>
+                        <div class="col-md-3 px-1">
+                            <div class="form-group">
+                                <input type="text" id="height" name="feet" class="form-control" placeholder="Type Feet"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-md-3 px-1">
+                            <div class="form-group">
+                                <input type="text" name="inch" class="form-control" placeholder="Type inch" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-0">
+                        <label class="h6" for="weight">Type Weight</label>
+                        <div class="col-md-6 px-1">
+                            <div class="form-group">
+                                <input type="text" id="weight" name="weight" class="form-control"
+                                    placeholder="Type You Weight" required>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 px-1">
                             <div class="form-group">
-                                <input type="text" name="feet" class="form-control" placeholder="Type Feet">
+                                <input type="submit" value="Submit" class="btn btn-primary">
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" name="inch" class="form-control" placeholder="Type inch">
-                            </div>
-                        </div>
-
                     </div>
 
-                    <input type="text" name="weight" class="form-control" placeholder="Type You Weight">
-                    <input type="submit" value="Submit" class="btn btn-primary">
                 </div>
+
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </body>
 
 </html>
