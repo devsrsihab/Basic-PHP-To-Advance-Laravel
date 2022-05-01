@@ -7,35 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 
 <body>
     <?php 
-    error_reporting(0);
-    $storage_age1 = $_POST['ageDeff1'];
 
-function ageDeff1($storage_age1){
-    $user_age1 = $storage_age1;
-    if ($user_age1 == 13) {
-         return "Hey, You are a little children";
-     }
-     elseif($user_age1 == 19) {
-         return "Hey, You are a teenagers";
-     }
-     elseif($user_age1 == 35) {
-         return "Hey, You are a Young Man";
-     }
-     elseif($user_age1 == 50) {
-         return "Hey, You are a Middle Ager";
-     }
-     elseif($user_age1 == 80) {
-         return "Hey, You are a Old Man";
-     }
-     elseif($user_age1 == 100) {
-         return "Hey, You are a So Old ";
-     }
-     
-};
+ 
+$storage_age1 = $_POST['ageDeff1'];
+
+if (isset($_POST['submit'])) {
+    function ageDeff1($storage_age1){
+        $user_age1 = $storage_age1;
+        if ($user_age1 == 13) {
+             return "Hey, You are a little children";
+         }
+         elseif($user_age1 == 19) {
+             return "Hey, You are a teenagers";
+         }
+         elseif($user_age1 == 35) {
+             return "Hey, You are a Young Man";
+         }
+         elseif($user_age1 == 50) {
+             return "Hey, You are a Middle Ager";
+         }
+         elseif($user_age1 == 80) {
+             return "Hey, You are a Old Man";
+         }
+         elseif($user_age1 == 100) {
+             return "Hey, You are a So Old ";
+         }         
+    }
+    
+}
+
   $storage_age2 = $_POST['ageDeff2'];
 function ageDeff2($storage_age2){
     $user_age2 = $storage_age2;

@@ -43,19 +43,14 @@
 $feet = $_POST['feet'];
 $inch = $_POST['inch'];
 $weight = $_POST['weight'];
-$weight = intval($weight);
+// $weight = intval($weight);
 $height = $feet. ".". $inch;
 $height = floatval($height);
-$height_to_inch = $height*12;
+// $height_to_inch = $height*12;
 $height_to_meter = $height_to_inch*0.0254;
-$height_to_squar = pow($height_to_meter, 2);
+$bmi = $weight/($height*$height);
+$bmi = number_format($bmi,1);
 // $bmi = $weight/$height_to_squar."\n";
-echo $height."<br>";
-echo $weight."<br>";
-$height2 = $height_to_meter*$height_to_meter;
-echo $height2."<br>";
-$bmi = $weight/$height2;
-echo $bmi."<br>";
 
 
 //bmi function
@@ -102,10 +97,10 @@ function bmiSms($bmiS){
 
 <body>
     <div class="container ">
-    <h2 claass="text-center">Assignment 5</h2>
+        <h2 claass="text-center">Assignment 5</h2>
         <form action="" method="post">
             <div class="row justify-content-center mt-5">
-        
+
                 <div class="col-md-5">
                     <table class="table table-striped">
                         <thead>

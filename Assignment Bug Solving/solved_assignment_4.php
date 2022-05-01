@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         .card-body {
             background-color: #eee;
@@ -33,16 +33,18 @@
 
 <body>
     <?php
-error_reporting(0);
-//========assignment 4 start=============
+
 $pd = date("d"); // present day
 $pm = date("m"); // present month
 $py = date("Y"); // present year
 //========form date compare formula================
-$d = $_POST['d'];
-$m = $_POST['m'];
-$y = $_POST['y'];
-$dob = $d.".".$m.".".$y;
+if (isset($_POST['submita4'])) {
+
+    $d = $_POST['d'];
+    $m = $_POST['m'];
+    $y = $_POST['y'];
+    $dob = $d.".".$m.".".$y;
+}
 //==========function start==================
 function srAgeCalc($final_dob){
 $bday = new DateTime($final_dob); // Your date of birth
@@ -54,6 +56,7 @@ return sprintf('%d years, %d month, %d days', $diff->y, $diff->m, $diff->d);
 
 //========assignment 4 end=============
 ?>
+
     <!-- ==================Assignment 4 start======================= -->
     <div class="container mt-5">
         <h2 class="text-center">Class-8 Assignment-4</h2>
@@ -64,7 +67,11 @@ return sprintf('%d years, %d month, %d days', $diff->y, $diff->m, $diff->d);
                     <h3 class="card-title text-success ">Result</h3>
                     <div class="h4 col-md-2 text-dark ">Your Age:</div>
                     <div class="h5 pt-1 col-md-6 text-start text-success  ">
-                        <?php echo srAgeCalc($dob);?></div>
+                        <?php
+                        if (isset($_POST['submita4'])) {
+                            echo srAgeCalc($dob);
+                        }
+                        ?></div>
                 </div>
             </div>
         </div>
@@ -112,7 +119,7 @@ return sprintf('%d years, %d month, %d days', $diff->y, $diff->m, $diff->d);
                     <!-- form button start -->
                     <div class=" form-group  row">
                         <div class=" d-flex ">
-                            <input class="button " name="submit" type="submit" class="form-control" value="submit">
+                            <input class="button " name="submita4" type="submit" class="form-control" value="submit">
                         </div>
                     </div>
                     <!-- form button end -->
