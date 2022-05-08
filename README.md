@@ -514,7 +514,7 @@
   - Parameter, Argument, Return
   - Mini Project - Execute a common work using function
 
-  2. ### User defined Functions
+  2. ### Built in String functions
   - Strlen()
   - Str_word_count()
   - Strpos()
