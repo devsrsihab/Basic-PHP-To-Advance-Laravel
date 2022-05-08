@@ -502,7 +502,7 @@
 
 <!-- class-8 overview start -->
 
-### Class-7 Overview
+### Class-8 Overview
 
 <details>
 
@@ -513,6 +513,23 @@
   - Way to create user defined functions.
   - Parameter, Argument, Return
   - Mini Project - Execute a common work using function
+
+  2. ### User defined Functions
+  - Strlen()
+  - Str_word_count()
+  - Strpos()
+  - Substr()
+  - str_split()
+  - Str_replace()
+  - Strtoupper()
+  - Strtolower()
+  - Str_shuffle()
+  - md5()
+  - money_format()
+  - number_format()
+  - htmlspecialchars()
+  - strip_tags()
+  - trim()
 
 
 </details>
