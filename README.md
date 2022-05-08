@@ -560,3 +560,27 @@
 </details>
 
 <!-- class-9 overview end -->
+
+<!-- class-10 overview start -->
+
+### Class-10 Overview
+
+<details>
+
+<summary> Click Here</summary>
+
+  1. ### Project - Form Handlings
+  - Validate - Set Dismissable alert message
+  - Validate - filter email or not 
+  - Validate - valid email check function
+  - Validate - edu email check function
+  - Validate - age validate function
+  - Validate - username validate function
+  - Validate - keep old data in fields.
+  - Validate - clear field data after success
+  - Validate - auto suggestion off
+
+
+</details>
+
+<!-- class-10 overview end -->
