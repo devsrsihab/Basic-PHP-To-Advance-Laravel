@@ -497,7 +497,7 @@
   2. ### Write php code on html
   3. ### Project based on array
   3. ### Mini Project - Product List (table/E-commerce)
-
+</details>
 <!-- class-7 overview end -->
 
 <!-- class-8 overview start -->
