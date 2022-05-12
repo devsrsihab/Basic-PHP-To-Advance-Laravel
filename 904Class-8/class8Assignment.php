@@ -246,7 +246,7 @@
             return $amount." Taka "." To ". " = ". number_format($amount*0.01178065, 3)." ". $ConverTo;
         } 
         elseif($_POST['to']=='EUR') {
-            return $amount." Taka"." To ". " = ". number_format(($amount*0.011169813 ), 3) ." ". " Taka";
+            return $amount." Taka"." To ". " = ". number_format(($amount*0.011169813 ), 3) ." ". " $ConverTo";
         }
         elseif($_POST['to']=='CAD') {
             return $amount." Taka"." To ". " = ". number_format(($amount*0.015147485 ), 3)  ." ". $ConverTo;
@@ -363,6 +363,7 @@
 
         <!-- ==================Assignment 2 start======================= -->
         <div class="container">
+            <h2 class="text-center mb-5">Assignment 2</h2>
             <div class="row mt-5">
                 <div class="col-md-4">
                     <div class="row align-items-center">
@@ -792,7 +793,7 @@
 
         <!-- ==================Assignment 5 start======================= -->
         <div class="container ">
-            <h2 claass="text-center">Assignment 5</h2>
+            <h2 class="text-center my-5">Assignment 5</h2>
             <form action="" method="post">
                 <div class="row justify-content-center mt-5">
 
@@ -903,7 +904,7 @@
                                     <h5><?php
                                  if (isset($_POST['submita6'])) {
                                     $ConverTo = $_POST['to'];                                  
-                                   echo $ConverTo." To Taka = ";
+                                   echo "Taka To ".  $ConverTo."  = ";
                                 }
                                     ?></h5>
                                     <h5 class="text-success"> <?php 
