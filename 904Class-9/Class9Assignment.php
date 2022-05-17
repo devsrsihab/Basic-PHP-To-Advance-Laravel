@@ -18,6 +18,7 @@
 <body>
 
 <?php 
+
    //========free student ===========
  if (isset($_POST['fsSubmit'] )) {
     $fsFirstName   = $_POST['fsFirstName'];
@@ -65,7 +66,7 @@ if (isset($_POST['PsSubmit'])) {
           <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
           <h3>Free Domain</h3>
           <p>Sorobindu- Learn With Fun</p>
-          <input type="submit" name="" value="Login" />
+          <input type="submit" name="anme" value="Login" />
           <br />
         </div>
         <div class="col-md-9 register-right">

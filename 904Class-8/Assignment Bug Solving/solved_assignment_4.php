@@ -40,17 +40,18 @@ $py = date("Y"); // present year
 //========form date compare formula================
 if (isset($_POST['submita4'])) {
 
-    $d = $_POST['d'];
-    $m = $_POST['m'];
-    $y = $_POST['y'];
-    $dob = $d.".".$m.".".$y;
+    $d = $_POST['d']; //user input date
+    $m = $_POST['m']; //user input month 
+    $y = $_POST['y']; // user input year
+    $dob = $d.".".$m.".".$y; //user full date of birth like: (04.02.1885)
 }
-//==========function start==================
+
+//==========function of birthday ==================
 function srAgeCalc($final_dob){
-$bday = new DateTime($final_dob); // Your date of birth
-$today = new Datetime(date('m.d.y'));
-$diff = $today->diff($bday);
-return sprintf('%d years, %d month, %d days', $diff->y, $diff->m, $diff->d);
+$bday = new DateTime($final_dob);     //user date of birth
+$today = new Datetime(date('m.d.y')); //present date
+$diff = $today->diff($bday);          // defferent between user birthday and today
+return sprintf('%d years, %d month, %d days', $diff->y, $diff->m, $diff->d); // echo the object
 };
 
 

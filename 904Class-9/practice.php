@@ -42,5 +42,7 @@
     //   $product['product Price']    = '120';
     //   echo "<pre>";
     //   print_r($product);
-    //   echo "</pre>"
+    //   echo "</pre>";
+
+
 ?>
