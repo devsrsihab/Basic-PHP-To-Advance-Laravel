@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Class 10 Practice</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
     <link rel="stylesheet" href="css/style.css">
 
 
@@ -16,15 +19,27 @@
 
     <!-- php -->
     <?php
-    
-    $emailBlankError = $EduMailError = $nameBlankError = $passwdBlankError  = $AgeBlankError = $UsernBlankError = $ageRestriction = $userNameError = null; // first all error valur assignent null
-    $email = $name = $passwd = null; // first all input var  valur assignent null
-    $flag= true;  // by default flag is true
 
+    
+    $emailBlankError = $EduMailError = $nameBlankError = $passwdError  = $AgeBlankError = $UsernBlankError = $ageRestriction = $userNameError = $reTypePassError = null; // first all error valur assignent null
+    $email = $age = $name = $userName = $passwd = $repass = null; // first all input var  valur assignent null
+    $flag= true;  // by default flag is true
+             /**
+         * oldValue for keep old values of fields
+         */
+        function oldValue($fileName){
+            if(isset($_POST[$fileName])){
+                echo $_POST[$fileName];
+            }
+            else{
+                echo '';
+            }
+
+        }
         if (isset($_POST['submit'])) {
 
         $email = $_POST['email'];
-        // email validation
+        // email empty validation
             if (empty($_POST["email"])) {
                 $emailBlankError = "Email is required";
                 $flag = false;
@@ -33,7 +48,7 @@
                 $email = input_test($_POST['email']);
                 }
 
-         // name validation
+         // name empty validation
             if (empty($_POST["name"])) {
                 $nameBlankError = "Name is required";
                 $flag = false;
@@ -42,15 +57,26 @@
                  $name = input_test($_POST['name']);
                   }
 
-            // passwd validation
+            // passwd empty validation
             if (empty($_POST["passwd"])) {
-                $passwdBlankError = "Name is required";
+                $passwdError = "Name is required";
+                $flag = false;
+                }elseif(strlen($_POST["passwd"]) < 8  ){
+                $passwdError = "Password At lest less 8 Characters";
                 $flag = false;
                 }
-            else{
+                else{
                 $passwd = input_test($_POST['passwd']);
                 }
-            // Username validation
+            // re-type empty error
+            if (empty($_POST['retypepassword'])) {
+                $reTypePassError = "Passwords is Required";
+                $flag = false;
+            } else {
+                 $repass = input_test($_POST['retypepassword']);                
+            }
+            
+            // Username empty validation
             if (empty($_POST["Username"])) {
                 $UsernBlankError = "Username is required";
                 $flag = false;
@@ -59,7 +85,7 @@
                 $userName = input_test($_POST['Username']);
                 }
 
-            // Age validation
+            // Age empty validation
             if (empty($_POST["age"])) {
                 $AgeBlankError = "Age is required";
                 $flag = false;
@@ -74,7 +100,7 @@
              * [a-zA-Z0-9 ]{5,15}
              */
             function userNameValidate($inputUser){
-                if (preg_match('/^[a-zA-Z0-9 ]{5,15}[^\W]$/i', $inputUser )) {
+                if (preg_match("/^ \b [A-ZA-y ]{5,25}[-,a-z. ']\b$/i", $inputUser )) {
                    return true;
                 }
                 else{
@@ -82,8 +108,6 @@
                 }
             }
 
-
-     
 
             /**
              * function for educatiom mail or not
@@ -123,9 +147,14 @@
             elseif ($age < 18 || $age > 60 ) {
                 $ageRestriction = "Your age is Restrict Because Your age is ".$age;
                 $flag = false;
-            }   
+            } 
+            elseif($passwd  !== $repass ){
+                $reTypePassError = "Passwords Don't Match";
+                $flag = false;
+            }  
            else{
                $formSmS = "<div class=\"alert alert-success\" role=\"alert\"> Your  Form Submited </div>"; 
+               $_POST = '';
             }
 
 
@@ -161,6 +190,10 @@
         //  }
 
 
+
+
+
+
 ?>
 
 
@@ -171,7 +204,7 @@
         <div class="row">
             <div class="col">
                 <!------ Include the above in your HEAD tag ---------->
-                <form method="post" action=""  >
+                <form method="post" action="">
                     <?php
                     if (isset($formSmS)) {
                         echo $formSmS;
@@ -179,7 +212,7 @@
                     ?>
                     <label>
                         <p class="label-txt">Username</p>
-                        <input type="text" class="input" name="Username">
+                        <input type="text" value="<?php oldValue('Username') ?>" class="input" name="Username">
                         <div class="line-box">
                             <div class="line"></div>
                         </div>
@@ -187,7 +220,7 @@
                     </label>
                     <label>
                         <p class="label-txt">ENTER YOUR EMAIL</p>
-                        <input type="text" class="input" name="email">
+                        <input type="text" value="<?php oldValue('email') ?>" class="input" name="email">
                         <div class="line-box">
                             <div class="line"></div>
                         </div>
@@ -195,7 +228,7 @@
                     </label>
                     <label>
                         <p class="label-txt">ENTER YOUR NAME</p>
-                        <input type="text" class="input" name="name">
+                        <input type="text" value="<?php oldValue('name') ?>" class="input" name="name">
                         <span></span>
                         <div class="line-box">
                             <div class="line"></div>
@@ -204,7 +237,7 @@
                     </label>
                     <label>
                         <p class="label-txt">AGE</p>
-                        <input type="text" class="input" name="age">
+                        <input type="text" value="<?php oldValue('age') ?>" class="input" name="age">
                         <span></span>
                         <div class="line-box">
                             <div class="line"></div>
@@ -212,13 +245,45 @@
                         <div class="error"><?php echo $AgeBlankError; echo $ageRestriction  ?></div>
                     </label>
                     <label>
-                        <p class="label-txt">ENTER YOUR PASSWORD</p>
-                        <input type="password" class="input" name="passwd">
-                        <div class="line-box">
-                            <div class="line"></div>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <p class="label-txt">PASSWORD</p>
+                                <input type="password" id="id_password" value="<?php oldValue('passwd') ?>"
+                                    class="id_password input" name="passwd">
+
+                                <div class="line-box">
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                <i class="far fa-eye" id="eye"
+                                    style="margin-left: -30px; cursor: pointer;"></i>
+                            </div>
                         </div>
-                        <div class="error"><?php echo $passwdBlankError  ?></div>
+                        <div class="error"><?php echo $passwdError  ?></div>
                     </label>
+                    <label>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <p class="label-txt">Re-Type PASSWORD</p>
+                                <input  type="password" id="id_password2" value="<?php oldValue('retypepassword') ?>"
+                                    class="id_password input" name="retypepassword">
+
+                                <div class="line-box">
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                <i class="far fa-eye" id="eye2" style="margin-left: -30px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+
+
+                        <div class="error"><?php echo $reTypePassError  ?></div>
+                    </label>
+
+
+                    <!-- button -->
                     <button type="submit" name="submit" class="btn btn-primary">submit</button>
                 </form>
             </div>
@@ -232,6 +297,33 @@
         integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/app.js"></script>
+    <script>
+        // second eye
+        $(document).ready(function(){
+        const password = $('#id_password') ;
+        const password2 = $('#id_password2') ;
+        $('#eye').click(function(){
+            if(password.prop('type') == 'password'){
+                $(this).addClass('fa-eye-slash');
+                password.attr('type','text')
+            }
+            else {
+                $(this).removeClass('fa-eye-slash');
+                password.attr('type','password');
+            }
+        })
+        $('#eye2').click(function(){
+            if(password2.prop('type') == 'password'){
+                $(this).addClass('fa-eye-slash');
+                password2.attr('type','text')
+            }
+            else {
+                $(this).removeClass('fa-eye-slash');
+                password2.attr('type','password');
+            }
+        })
+    })
+    </script>
 </body>
 
 </html>
