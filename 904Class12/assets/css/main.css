@@ -770,6 +770,10 @@ section {
     transform: scaleX(0);
     transition: all 0.3s ease-in-out 0s;
   }
+  .header.sticked .navbar > ul > li > a:before{
+    background: var(--color-white);
+  }
+
   .navbar a:hover:before, .navbar li:hover > a:before, .navbar .active:before {
     visibility: visible;
     transform: scaleX(0.7);

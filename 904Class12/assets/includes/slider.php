@@ -10,7 +10,7 @@
             <div class="image" style="background-image: url('assets/img/slider/slide_1.jpg');"></div>
             <div class="text">
               <blockquote>
-                <p>&ldquo; First You are Planing Our Work. How do we proceed step by step?. It Will be more faster ou work and Smooth. When you are planing your work, Then it will be smooth and faster better then past.&rdquo;</p>
+                <p>&ldquo; First You are Planing Our Work. How do we proceed step by step?. It Will be more faster ou work and Smooth. When you are planing your work, Then it will be smooth and faster better then past.Because we are developer that's why it's very mendotory for us and it should be you.So we are follwing the rules and we are in the joss&rdquo;</p>
 
                 <div class="author">&mdash; S.R Sihab</div>
               </blockquote>
