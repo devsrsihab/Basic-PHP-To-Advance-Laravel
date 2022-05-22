@@ -610,3 +610,24 @@
 
 </details><!-- class-12 overview end -->
 
+<!-- class-13 overview start -->
+### Class-13 Overview
+
+<details>
+
+<summary>Click Here</summary>
+
+  1. ### Project - Project Templating
+  - What is Database?
+  - Data vs Information
+  - Example of a database
+  - How to create a database?
+  - Create a Table into a database
+  - Alter & Drop a Table
+  - Insert Single Data into a table
+  - Insert multiple Data into a table
+  - Update data from a table
+  - Delete data from a table
+
+</details><!-- class-13 overview end -->
+
