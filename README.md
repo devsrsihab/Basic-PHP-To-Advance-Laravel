@@ -604,9 +604,9 @@
 <summary> Click Here</summary>
 
   1. ### Project - Project Templating
-  -- Include, include_once
-  -- Require, require_once
-  -- Example - Project Template
+  - Include, include_once
+  - Require, require_once
+  - Example - Project Template
 
 </details><!-- class-12 overview end -->
 
