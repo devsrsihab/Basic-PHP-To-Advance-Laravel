@@ -35,8 +35,8 @@
 
 
 
-</details>
-<!-- class-1 overview end -->
+</details><!-- class-1 overview end -->
+
 
 <!-- class-2 overview start -->
 ### Class-2 Overview
@@ -91,8 +91,8 @@
 
 - Null, Resource-.
 
-  </details>
-<!-- class-2 overview end -->
+  </details><!-- class-2 overview end -->
+
 
 <!-- class-3 overview start -->
 ### Class-3 Overview
@@ -145,8 +145,8 @@
 - Switch
 
 
- </details>
-<!-- class-3 overview end -->
+ </details><!-- class-3 overview end -->
+
 
 <!-- class-4 overview start -->
 ### Class-4 Overview
@@ -193,8 +193,8 @@
     ```
 
 
-</details>
-<!-- class-1 overview end -->
+</details><!-- class-1 overview end -->
+
 
 <!-- class-5 overview start -->
 ### Class-5 Overview
@@ -277,8 +277,8 @@
 
 ```
 
-</details>
-<!-- class 5 is end -->
+</details><!-- class 5 is end -->
+
 
 <!-- class-6 overview start -->
 ### Class-6 Overview
@@ -429,10 +429,9 @@
     ?>
    ```
 
-</details>
-<!-- class-6 overview end -->
-<!-- class-7 overview start -->
+</details><!-- class-6 overview end -->
 
+<!-- class-7 overview start -->
 ### Class-7 Overview
 
 <details>
@@ -497,11 +496,10 @@
   2. ### Write php code on html
   3. ### Project based on array
   3. ### Mini Project - Product List (table/E-commerce)
-</details>
-<!-- class-7 overview end -->
+</details><!-- class-7 overview end -->
+
 
 <!-- class-8 overview start -->
-
 ### Class-8 Overview
 
 <details>
@@ -532,12 +530,11 @@
   - trim()
 
 
-</details>
+</details> <!-- class-8 overview end -->
 
-<!-- class-8 overview end -->
+
 
 <!-- class-9 overview start -->
-
 ### Class-9 Overview
 
 <details>
@@ -557,12 +554,9 @@
   - Form isset
   - Primary Validation message.
 
-</details>
-
-<!-- class-9 overview end -->
+</details><!-- class-9 overview end -->
 
 <!-- class-10 overview start -->
-
 ### Class-10 Overview
 
 <details>
@@ -581,6 +575,38 @@
   - Validate - auto suggestion off
 
 
-</details>
+</details><!-- class-10 overview end -->
 
-<!-- class-10 overview end -->
+<!-- class-11 overview start -->
+### Class-11 Overview
+
+<details>
+
+<summary> Click Here</summary>
+
+  1. ### Project - Form Handlings
+  - Validate - Validate - age validate function
+  - Validate - username validate function
+  - Validate - keep old data in fields.
+  - Validate - clear field data after success
+  - Validate - auto suggestion off
+  - Validate - radio button
+  - Validate - Checkbox field
+  - Validate - select option field
+
+</details><!-- class-11 overview end -->
+
+<!-- class-12 overview start -->
+### Class-12 Overview
+
+<details>
+
+<summary> Click Here</summary>
+
+  1. ### Project - Project Templating
+  -- Include, include_once
+  -- Require, require_once
+  -- Example - Project Template
+
+</details><!-- class-12 overview end -->
+
