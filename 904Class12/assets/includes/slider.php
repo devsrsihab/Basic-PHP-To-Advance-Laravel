@@ -1,6 +1,8 @@
   <!-- ======= Slider ======= -->
   <div class="content">
+  <div class="row">
 
+  </div>
     <div class="banner_slider">
 
       <div class="slider-92911">

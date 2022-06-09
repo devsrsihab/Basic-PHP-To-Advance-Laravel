@@ -137,7 +137,7 @@ if(empty($_POST['userName'])){
 
  }
 
-  // clearing old alue after submit
+  // clearing old value after submit
   if($flag){
     $formSuccess = "<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\"> Your Form is Submited! <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\" aria-label=\"Close\"></button> </div>";
     $_POST = '';
