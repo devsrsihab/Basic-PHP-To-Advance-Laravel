@@ -10,8 +10,7 @@
                 <li class=""><a href=" <?php echo $isInternalUrl == true ? '../banner/' : 'banner/'?>bannerList.php "><i class=" icon-menu2"></i><span>Banners</span></a></li>
 				<li class=""><a href="<?php echo $isInternalUrl == true ? '../services/' : 'services/'?>servicesLIst.php"><i class="icon-hammer"></i><span>Services</span></a></li>
 
-				
-				<li class=""><a href="index.html"><i class=" icon-grid4"></i><span>Our Projects</span></a></li>
+				<li class=""> <a href="<?php echo $isInternalUrl == true ? '../our_project/' : 'our_project/' ?>projectsList.php"><i class=" icon-grid4"></i><span>Our Projects</span></a></li>
 				<li class=" "><a href="index.html"><i class="icon-users4"></i><span>Our Staff</span></a></li>
 				<li class=""><a href="index.html"><i class="icon-hour-glass3"></i><span>Our Clients</span></a></li>
 				<li class=" "><a href="index.html"><i class="icon-bubbles9"></i><span>Contact Message</span></a></li>

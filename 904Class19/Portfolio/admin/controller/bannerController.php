@@ -1,10 +1,38 @@
 <?php 
 // database connection Qury
   require 'dbConfigue.php';
-
-
 // this is for banner Create 
 if (isset($_POST['CreateData'])) {
+
+
+    // for image 
+    if(isset($_FILES['image'])){
+      $uploadStatus = false;
+      $mainArrImg = $_FILES['image'];
+      $file_name = $mainArrImg['name'];
+      $file_temp_name = $mainArrImg['tmp_name'];
+      $file_size = $mainArrImg['size'];
+      
+      // extract file extentions 
+      $FileExArr= explode('.',$file_name);
+      // get the file extentions 
+      $FileExtention = strtolower(end($FileExArr));
+      // This is allowed file extention
+      $FileValidExt = ['jpg', 'jpeg', 'png'];
+      // random name generated
+      $fileRandomName = time().'.'.$FileExtention;
+      // condtional massage file extention
+      if (in_array($FileExtention, $FileValidExt) ) {
+        move_uploaded_file($file_temp_name, '../uploads/bannerImages/' .$fileRandomName);
+        $uploadStatus = true;
+      } else {
+        $massage = $FileExtention." is Not Allowed";
+      }
+      $massage = "File Not Found";
+    
+    }
+
+
 
         $title        = $_POST['title'];
         $SubTitle     = $_POST['subtitle'];
@@ -12,11 +40,11 @@ if (isset($_POST['CreateData'])) {
         $image        = $_POST['image'];
         $activeStatus = $_POST['activeStatus'];
 
- if ( empty($title ||  $SubTitle || $details || $image)   ) {
+ if ( empty($title) ||  empty($SubTitle) || empty($details) ||  $uploadStatus== false   ) {
     $massage = "All Field is Required";
     $alertCls = "alert-danger";
  } else {
-   $isertQry = "INSERT INTO banner (title,sub_title,details,image,active_status) VALUES ('{$title}', '{$SubTitle}', '{$details}', '{$image}', '{$activeStatus}' ) ";
+   $isertQry = "INSERT INTO banner (title,sub_title,details,image,active_status) VALUES ('{$title}', '{$SubTitle}', '{$details}', '{$fileRandomName}', '{$activeStatus}' ) ";
    $bannerInsert = mysqli_query($conn, $isertQry)  ;
 
    if ($bannerInsert) {
@@ -68,4 +96,3 @@ header ("location: ../banner/bannerUpdate.php?msg={$massage}&acls={$alertCls}&id
 }
 
 
-?>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php
+<?php 
 if (basename(__DIR__)!= 'admin') {
 	$baseUrl = '../';
 	$isInternalUrl = true;
@@ -10,12 +10,12 @@ if (basename(__DIR__)!= 'admin') {
 	$isInternalUrl = false;
 }
 
-
-include '../includes/head.php'
+// <!-- /heading -->
+include '../includes/head.php';
+// database connection 
+require '../controller/dbConfigue.php';
 
 ?>
-<!-- /heading -->
-
 <body>
 
 	<!-- Main navbar -->
@@ -33,8 +33,8 @@ include '../includes/head.php'
 			<div class="sidebar sidebar-main">
 				<div class="sidebar-content">
 
-									<!-- User menu -->
-									<div class="sidebar-user">
+					<!-- User menu -->
+					<div class="sidebar-user">
 						<div class="category-content">
 							<div class="media">
 								<a href="#" class="media-left"><img src="../assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></a>
@@ -56,7 +56,8 @@ include '../includes/head.php'
 						</div>
 					</div>
 					<!-- /user menu -->
-					
+
+
 					<!-- Main navigation -->
 
 					<?php include '../includes/navigation.php' ?>
@@ -78,8 +79,7 @@ include '../includes/head.php'
 					<div class="breadcrumb-line">
 						<ul class="breadcrumb">
 							<li><a href="banner.php"><i class="icon-menu2 position-left"></i> Banner</a></li>
-							<li class="">List</li>
-							<li class="active">Banner Create</li>
+							<li class="active">List</li>
 						</ul>
 
 
@@ -93,68 +93,64 @@ include '../includes/head.php'
 
 					<!-- Basic datatable -->
 					<div class="panel panel-flat">
-						<div class="panel-heading mb-5" >
-							<h5 class="panel-title">Banner List</h5>
+						<div class="panel-heading">
+							<h5 class="panel-title">projects List</h5>
 							<div class="heading-elements">
 								<ul class="icons-list">
-									<li><a href="" class="btn btn-primary add_new">Add New</a></li>
+									<li><a href="projectsCreate.php" class="btn btn-primary add_new">Add New</a></li>
 			                		<li><a data-action="collapse"></a></li>
 			                		<li><a data-action="reload"></a></li>
 			                		<li><a data-action="close"></a></li>
 			                	</ul>
 		                	</div>
 						</div>
-					<!-- success msg -->
-					<?php if (isset($_GET['msg'])) {
+							<!-- success msg -->
+							<?php if (isset($_GET['msg'])) {
 						# code...
 				     	?>
 				    	<div class="alert <?php echo $_GET['acls'];  ?> " role="alert">
                           <?php echo $_GET['msg']; ?>
 						</div>
 				    	<?php } ?>
-						<div class="panel-body form_list_panel">
-						<form class="form-horizontal" action="../controller/bannerController.php" method="post" enctype="multipart/form-data"  >
-								<fieldset class="content-group">
+						<div class="panel-body ">
 
-									<div class="form-group">
-										<label class="control-label col-lg-2" for="title"  >Title</label>
-										<div class="col-lg-10">
-											<input id ="title" name ="title" type="text" class="form-control">
-										</div>
-									</div>		
-									<div class="form-group">
-										<label class="control-label col-lg-2" for="subtitle"  >Sub Title</label>
-										<div class="col-lg-10">
-											<input id ="subtitle" name="subtitle"  type="text" class="form-control">
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="control-label col-lg-2" for="details">Details</label>
-										<div class="col-lg-10">
-											<textarea id="details" name="details" rows="5" cols="5" class="form-control" placeholder="Default textarea"></textarea>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="control-label col-lg-2" for="image"  >Image</label>
-										<div class="col-lg-10">
-											<input id ="image" name="image" type="file" class="form-control">
-										</div>
-									</div> 
-									<div class="form-group">
-										<label class="control-label col-lg-2" for="activeStatus"  >Active Status</label>
-										<div class="col-lg-10">
-											<input id ="activeStatus" name ="activeStatus" type="number" class="form-control">
-										</div>
-									</div>
-								</fieldset>
+						<table class="table table-bordered table-striped datatable-basic ">
+							<thead>
+								<tr>
+									<th >SL.</th>
+									<th >Category</th>
+									<th >projects Name</th>
+									<th >projects Link</th>
+									<th >Project Thumbnail</th>
+									<th >Active Status</th>
+									<th  class="text-center">Actions</th>
+								</tr>
+							</thead>
+							<tbody>
 
-								<div class="text-right">
-									<button type="submit" name="CreateData" class="btn btn-primary">Submit <i class="icon-arrow-right14 position-right"></i></button>
-									<a href="bannerList.php"class="btn btn-warning">Back To Banner List</i></a>
-								</div>
-							</form>
+							<?php 
+							$SelectQry = "SELECT our_projects.*, categories.category_name FROM `our_projects` INNER JOIN categories ON our_projects.category_id = categories.id WHERE our_projects.active_status = 1 ORDER BY our_projects.id" ;
 
-
+							$projectsList = mysqli_query($conn, $SelectQry);
+							foreach ($projectsList as $key => $project) {
+								
+						 
+						     	?>
+								<tr>
+									<td> <?php echo ++$key; ?> </td>			
+									<td> <?php echo $project['category_name']; ?> </td>
+									<td> <?php echo $project['project_name']; ?> </td>
+									<td> <?php echo $project['project_link']; ?> </td>
+									<td> <img  width="80" height="80" src="<?php echo '../uploads/projectThums/'.$project['project_thumb']; ?>"/> </td>
+									<td> <?php echo $project['active_status']; ?> </td>
+									<td class="text-center">
+							  <a href="projectsUpdate.php?id=<?php echo $project['id']; ?>" class="ml-2 mr-2"><i class="icon-pencil5"></i></a>
+							  <a href="projectsDelete.php?id=<?php echo $project['id']; ?>" class="ml-2 mr-2"><i class=" icon-trash"></i></a>
+									</td>
+								</tr>
+							<?php	} ?>
+							</tbody>
+						</table>
 						</div>
 
 					</div>
@@ -171,6 +167,7 @@ include '../includes/head.php'
 
 				</div>
 				<!-- /content area -->
+				
 
 			</div>
 			<!-- /main content -->
@@ -183,7 +180,13 @@ include '../includes/head.php'
 
 
 
-
+<script>// menu active class add by sohan 
+$(document).ready(function(){
+    $(".sr_menu ").click(function(){
+      $(this).toggleClass("active");
+    });
+  });
+  </script>
 
 
 <!-- heading -->

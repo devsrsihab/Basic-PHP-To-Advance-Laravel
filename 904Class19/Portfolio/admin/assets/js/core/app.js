@@ -9,6 +9,17 @@
 *
 * ---------------------------------------------------------------------------- */
 
+// menu active class add by sohan 
+$(document).ready(function(){
+    $(".sr_menu, a").click(function(){
+      $(this).toggleClass("main");
+    });
+  });
+
+
+
+
+
 $(function() {
 
 

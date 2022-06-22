@@ -140,7 +140,7 @@ require '../controller/dbConfigue.php';
 									<td> <?php echo $baner['title']; ?> </td>
 									<td> <?php echo $baner['sub_title']; ?> </td>
 									<td> <?php echo $baner['details']; ?> </td>
-									<td> <?php echo $baner['image']; ?> </td>
+									<td> <img  width="80" height="80" src="<?php echo '../uploads/bannerImages/'.$baner['image']; ?>"/> </td>
 									<td> <?php echo $baner['active_status']; ?> </td>
 									<td class="text-center">
 							  <a href="bannerUpdate.php?id=<?php echo $baner['id']; ?>" class="ml-2 mr-2"><i class="icon-pencil5"></i></a>

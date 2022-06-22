@@ -77,9 +77,9 @@ include '../includes/head.php'
 
 					<div class="breadcrumb-line">
 						<ul class="breadcrumb">
-							<li><a href="banner.php"><i class="icon-menu2 position-left"></i> Banner</a></li>
+							<li><a href="project.php"><i class="icon-menu2 position-left"></i> project</a></li>
 							<li class="">List</li>
-							<li class="active">Banner Create</li>
+							<li class="active">Project Create</li>
 						</ul>
 
 
@@ -94,7 +94,7 @@ include '../includes/head.php'
 					<!-- Basic datatable -->
 					<div class="panel panel-flat">
 						<div class="panel-heading mb-5" >
-							<h5 class="panel-title">Banner List</h5>
+							<h5 class="panel-title">Project Add Form</h5>
 							<div class="heading-elements">
 								<ul class="icons-list">
 									<li><a href="" class="btn btn-primary add_new">Add New</a></li>
@@ -113,44 +113,52 @@ include '../includes/head.php'
 						</div>
 				    	<?php } ?>
 						<div class="panel-body form_list_panel">
-						<form class="form-horizontal" action="../controller/bannerController.php" method="post" enctype="multipart/form-data"  >
+						<form class="form-horizontal" action="../controller/projectsController.php" method="post" enctype="multipart/form-data" >
 								<fieldset class="content-group">
 
 									<div class="form-group">
-										<label class="control-label col-lg-2" for="title"  >Title</label>
+										<label class="control-label col-lg-2" for="project_name"  >projects Name</label>
 										<div class="col-lg-10">
-											<input id ="title" name ="title" type="text" class="form-control">
+											<input id="project_name" name="project_name" type="text" class="form-control">
 										</div>
-									</div>		
+									</div>	
+
+									<!-- categroy query -->
+									<?php 
+									require "../controller/dbConfigue.php";
+									$dropdownQry = "SELECT * FROM categories WHERE active_status = 1 ";
+									$categorriesList = mysqli_query($conn, $dropdownQry);
+									?>
 									<div class="form-group">
-										<label class="control-label col-lg-2" for="subtitle"  >Sub Title</label>
+			                        	<label for="category_id" class="control-label col-lg-2"> select Category</label>
+			                        	<div class="col-lg-10">
+				                            <select id="category_id" name="category_id" class="form-control">
+				                                <option value="opt1"> select Category</option>
+												<?php foreach ($categorriesList as $key => $categorie) {
+													
+												 ?>
+				                                   <option value="<?php echo $categorie['id'] ?>"><?php echo $categorie['category_name'] ?></option>
+												<?php } ?>
+				                            </select>
+			                            </div>
+			                        </div>	
+									<div class="form-group">
+										<label class="control-label col-lg-2" for="project_link">projects Link</label>
 										<div class="col-lg-10">
-											<input id ="subtitle" name="subtitle"  type="text" class="form-control">
+										<input id="project_link" name="project_link"  type="text" class="form-control">
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="control-label col-lg-2" for="details">Details</label>
+										<label class="control-label col-lg-2" for="project_thumb">Project Thumbnail</label>
 										<div class="col-lg-10">
-											<textarea id="details" name="details" rows="5" cols="5" class="form-control" placeholder="Default textarea"></textarea>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="control-label col-lg-2" for="image"  >Image</label>
-										<div class="col-lg-10">
-											<input id ="image" name="image" type="file" class="form-control">
-										</div>
-									</div> 
-									<div class="form-group">
-										<label class="control-label col-lg-2" for="activeStatus"  >Active Status</label>
-										<div class="col-lg-10">
-											<input id ="activeStatus" name ="activeStatus" type="number" class="form-control">
+											<input id="project_thumb" name="project_thumb" type="file" class="form-control">
 										</div>
 									</div>
 								</fieldset>
 
 								<div class="text-right">
-									<button type="submit" name="CreateData" class="btn btn-primary">Submit <i class="icon-arrow-right14 position-right"></i></button>
-									<a href="bannerList.php"class="btn btn-warning">Back To Banner List</i></a>
+									<button type="submit" name="CreateData" class="btn btn-primary">Create <i class="icon-arrow-right14 position-right"></i></button>
+									<a href="projectsList.php"class="btn btn-warning">Back To Services List</i></a>
 								</div>
 							</form>
 

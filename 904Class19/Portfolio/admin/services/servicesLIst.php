@@ -121,7 +121,6 @@ require '../controller/dbConfigue.php';
 									<th >Services Name</th>
 									<th >Services Details</th>
 									<th >Icon Name</th>
-									<th >Design Status</th>
 									<th  class="text-center">Actions</th>
 								</tr>
 							</thead>
@@ -138,8 +137,7 @@ require '../controller/dbConfigue.php';
 									<td> <?php echo ++$key; ?> </td>
 									<td> <?php echo $service['service_name']; ?> </td>
 									<td> <?php echo $service['service_details']; ?> </td>
-									<td> <?php echo $service['icon_name']; ?> </td>
-									<td> <?php echo $service['design_status']; ?> </td>
+									<td> <?php echo $service['icon_name']; ?> </td> 
 									<td class="text-center">
 							  <a href="servicesUpdate.php?id=<?php echo $service['id']; ?>" class="ml-2 mr-2"><i class="icon-pencil5"></i></a>
 							  <a href="servicesDelete.php?id=<?php echo $service['id']; ?>" class="ml-2 mr-2"><i class=" icon-trash"></i></a>
@@ -197,7 +195,6 @@ require '../controller/dbConfigue.php';
 									<th >Services Name</th>
 									<th >Services Details</th>
 									<th >Icon Name</th>
-									<th >Design Status</th>
 									<th  class="text-center">Actions</th>
 								</tr>
 							</thead>
@@ -215,7 +212,6 @@ require '../controller/dbConfigue.php';
 									<td> <?php echo $service['service_name']; ?> </td>
 									<td> <?php echo $service['service_details']; ?> </td>
 									<td> <?php echo $service['icon_name']; ?> </td>
-									<td> <?php echo $service['design_status']; ?> </td>
 									<td class="text-center">
 									<a href="servicesUpdate.php?id=<?php echo $service['id']; ?>" class="ml-2 mr-2"><i class="icon-pencil5"></i></a>
 									<a href="servicesDelete.php?id=<?php echo $service['id']; ?>" class="ml-2 mr-2"><i class=" icon-trash"></i></a>
