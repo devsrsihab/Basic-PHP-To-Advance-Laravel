@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <?php
 if (basename(__DIR__)!= 'admin') {
 	$baseUrl = '../';
@@ -11,9 +10,8 @@ if (basename(__DIR__)!= 'admin') {
 }
 
 
-include '../includes/head.php'
 
-?>
+include '../includes/head.php'?>
 <!-- /heading -->
 
 <body>
@@ -56,7 +54,7 @@ include '../includes/head.php'
 						</div>
 					</div>
 					<!-- /user menu -->
-					
+
 					<!-- Main navigation -->
 
 					<?php include '../includes/navigation.php' ?>
@@ -77,9 +75,9 @@ include '../includes/head.php'
 
 					<div class="breadcrumb-line">
 						<ul class="breadcrumb">
-							<li><a href="project.php"><i class="icon-menu2 position-left"></i> project</a></li>
+							<li><a href="banner.php"><i class="icon-menu2 position-left"></i> Contact Us</a></li>
 							<li class="">List</li>
-							<li class="active">Project Create</li>
+							<li class="active">Contact Us Update</li>
 						</ul>
 
 
@@ -88,16 +86,24 @@ include '../includes/head.php'
 				<!-- /page header -->
 
 
+
 				<!-- Content area -->
 				<div class="content">
-
+				 <!-- this code for fethc data -->
+				 <?php
+				 require "../controller/dbConfigue.php";
+				 $dataId = $_GET['id'];
+				 $getSingleDataQry = "SELECT * FROM contact_us WHERE id = {$dataId} ";
+				 $contactUsResult = mysqli_query($conn, $getSingleDataQry);
+				 
+				 ?>
 					<!-- Basic datatable -->
 					<div class="panel panel-flat">
 						<div class="panel-heading mb-5" >
-							<h5 class="panel-title">Project Add Form</h5>
+							<h5 class="panel-title">Contact Us List</h5>
 							<div class="heading-elements">
 								<ul class="icons-list">
-									<li><a href="" class="btn btn-primary add_new">Add New</a></li>
+									<li><a href="contactUsCreate.php" class="btn btn-primary add_new">Add New</a></li>
 			                		<li><a data-action="collapse"></a></li>
 			                		<li><a data-action="reload"></a></li>
 			                		<li><a data-action="close"></a></li>
@@ -113,56 +119,43 @@ include '../includes/head.php'
 						</div>
 				    	<?php } ?>
 						<div class="panel-body form_list_panel">
-						<form class="form-horizontal" action="../controller/projectsController.php" method="post" enctype="multipart/form-data" >
+						<form class="form-horizontal" action="../controller/contactUsController.php" method="post">
 								<fieldset class="content-group">
 
-									<div class="form-group">
-										<label class="control-label col-lg-2" for="project_name"  >projects Name</label>
+
+								<?php 
+
+								foreach ($contactUsResult as $key => $contactUsResult) {
+									# code...
+								
+            
+								?>
+	                                  <div class="form-group">\
+										<input type="hidden" value="<?php echo $contactUsResult['id'] ?>" name="contactUs_id">
+										<label class="control-label col-lg-2" for="contact_topic"  >Contact Topic</label>
 										<div class="col-lg-10">
-											<input id="project_name" name="project_name" type="text" class="form-control">
+											<input id="contact_topic" value="<?php echo $contactUsResult['contact_topic']  ?>" name="contact_topic" type="text" class="form-control">
 										</div>
-									</div>	
-
-									<!-- categroy query -->
-									<?php 
-									require "../controller/dbConfigue.php";
-									$dropdownQry = "SELECT * FROM categories WHERE active_status = 1 ";
-									$categorriesList = mysqli_query($conn, $dropdownQry);
-									?>
+									</div>		
 									<div class="form-group">
-			                        	<label for="category_id" class="control-label col-lg-2"> select Category</label>
-			                        	<div class="col-lg-10">
-				                        <select id="category_id" name="category_id" class="form-control">
-				                        <option value=""> select Category</option>
-										<?php foreach ($categorriesList as $key => $categorie){
-											
-										echo "<option value='{$categorie['id']}'>{$categorie['category_name']}</option>";
-
-
-											
-											}?>
-				                     
-						
-				                            </select>
-			                            </div>
-			                        </div>	
-									<div class="form-group">
-										<label class="control-label col-lg-2" for="project_link">projects Link</label>
+										<label class="control-label col-lg-2" for="contact_details">Contact Details</label>
 										<div class="col-lg-10">
-										<input id="project_link" name="project_link"  type="text" class="form-control">
+											<textarea id="contact_details" name="contact_details" rows="5" cols="5" class="form-control" placeholder="Default textarea">"<?php echo $contactUsResult['contact_details']  ?></textarea>
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="control-label col-lg-2" for="project_thumb">Project Thumbnail</label>
+										<label class="control-label col-lg-2" for="icon_name"  >Icon</label>
 										<div class="col-lg-10">
-											<input id="project_thumb" name="project_thumb" type="file" class="form-control">
+											<input id="icon_name" value="<?php echo $contactUsResult['icon_name']  ?>" name="icon_name" type="file" class="form-control">
 										</div>
-									</div>
+									</div> 
+
+									<?php } ?>
 								</fieldset>
 
 								<div class="text-right">
-									<button type="submit" name="CreateData" class="btn btn-primary">Create <i class="icon-arrow-right14 position-right"></i></button>
-									<a href="projectsList.php"class="btn btn-warning">Back To Services List</i></a>
+									<button type="submit" name="UpdateData" class="btn btn-primary">Update <i class="icon-arrow-right14 position-right"></i></button>
+									<a href="contactUsList.php"class="btn btn-warning">Back To Contact Us List</i></a>
 								</div>
 							</form>
 

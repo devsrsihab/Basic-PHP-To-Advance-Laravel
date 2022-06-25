@@ -93,8 +93,8 @@ include '../includes/head.php'?>
 				 <?php
 				 require "../controller/dbConfigue.php";
 				 $dataId = $_GET['id'];
-				 $getSingleDataQry = "SELECT * FROM our_staff WHERE id = {$dataId} ";
-				 $singleDataResult = mysqli_query($conn, $getSingleDataQry);
+				 $ourStaffDataQry = "SELECT * FROM our_staff WHERE id = {$dataId} ";
+				 $ourStaffResult = mysqli_query($conn, $ourStaffDataQry);
 				 
 				 ?>
 					<!-- Basic datatable -->
@@ -119,47 +119,82 @@ include '../includes/head.php'?>
 						</div>
 				    	<?php } ?>
 						<div class="panel-body form_list_panel">
-						<form class="form-horizontal" action="../controller/StaffController.php" method="post">
+						<form class="form-horizontal" action="../controller/ourStaffController.php" method="post">
 								<fieldset class="content-group">
 
 
 								<?php 
 
-								foreach ($singleDataResult as $key => $singleResult) {
-									# code...
-								
+								foreach ($ourStaffResult as $key => $ourStaffResult) {
             
-								?>
+								  ?>
+                                     <div class="form-group">
+										<input name="staff_id" type="hidden" value="<?php echo $ourStaffResult['id'] ?>">
+										<label class="control-label col-lg-2" for="staff_name"  >Staff Name</label>
+										<div class="col-lg-10">
+											<input id="staff_name" value="<?php echo $ourStaffResult['staff_name'] ?>" name="staff_name" type="text" class="form-control">
+										</div>
+									</div>	
+									
+									<!-- ddesignation qry -->
+									<?php
+									require '../controller/dbConfigue.php';
+									$designationsSQL = "SELECT * FROM designations WHERE active_status = 1";
+									$designationsResult = mysqli_query($conn, $designationsSQL) ;
+					
+									
+									?>
 
 									<div class="form-group">
-										<input type="hidden" name="Staff_id" value="<?php echo $singleResult['id']  ?>">
-										<label class="control-label col-lg-2" for="title"  >Title</label>
-										<div class="col-lg-10">
-											<input value="<?php echo $singleResult['title'] ?> " id ="title" name ="title" type="text" class="form-control">
-										</div>
-									</div>		
+			                        	<label for="designation_id" class="control-label col-lg-2"> select Designation</label>
+			                        	<div class="col-lg-10">
+				                            <select id="designation_id" name="designation_id" class="form-control">
+				                                <option value=""> select Category</option>
+									   <?php 
+
+									  foreach ($designationsResult as $designation){
+										if ($ourStaffResult['designation_id'] == $designation['id']) {
+											$select = "Selected";
+										} else {
+											$select = "";
+										}
+										
+										echo "<option {$select} value='{$designation['id']}'>{$designation['designation_name']}</option>";
+
+									  }
+								     	?>
+
+					
+				                            </select>
+			                            </div>
+			                        </div>	
 									<div class="form-group">
-										<label " class="control-label col-lg-2" for="subtitle"  >Sub Title</label>
+										<label class="control-label col-lg-2" for="staff_image">Staff Image</label>
 										<div class="col-lg-10">
-											<input value="<?php echo $singleResult['sub_title'] ?>"   id ="subtitle" name="subtitle"  type="text" class="form-control">
-										</div>
+										<input id="staff_image" value="<?php echo $ourStaffResult['staff_image'] ?>" name="staff_image" type="file" class="form-control">
 									</div>
 									<div class="form-group">
-										<label class="control-label col-lg-2" for="details">Details</label>
+										<label class="control-label col-lg-2" for="twitter"  >Twitter</label>
 										<div class="col-lg-10">
-											<textarea id="details" name="details" rows="5" cols="5" class="form-control" placeholder="Default textarea"><?php echo $singleResult['details'] ?></textarea>
-										</div>
-									</div>
-									<div class="form-group">
-										<label class="control-label col-lg-2" for="image"  >Image</label>
-										<div class="col-lg-10">
-											<input value="<?php echo $singleResult['image'] ?>" id ="image" name="image" type="text" class="form-control">
+											<input id="twitter" value="<?php echo $ourStaffResult['twitter'] ?>" name="twitter" type="text" class="form-control">
 										</div>
 									</div> 
 									<div class="form-group">
-										<label class="control-label col-lg-2" for="activeStatus"  >Active Status</label>
+										<label class="control-label col-lg-2" for="facebook"  >Facebook</label>
 										<div class="col-lg-10">
-											<input value="<?php echo $singleResult['active_status'] ?>" id ="activeStatus" name ="activeStatus" type="number" class="form-control">
+											<input id="facebook" value="<?php echo $ourStaffResult['facebook'] ?>" name="facebook" type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-lg-2" for="linkedin"  >Linkdein</label>
+										<div class="col-lg-10">
+											<input id="linkedin" value="<?php echo $ourStaffResult['linkedin'] ?>" name="linkedin" type="text" class="form-control">
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="control-label col-lg-2" for="instagram"  >Instagram</label>
+										<div class="col-lg-10">
+											<input id="instagram" value="<?php echo $ourStaffResult['instagram'] ?>" name="instagram" type="text" class="form-control">
 										</div>
 									</div>
 

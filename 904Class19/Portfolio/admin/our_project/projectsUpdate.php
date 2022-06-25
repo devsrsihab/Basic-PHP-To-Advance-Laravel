@@ -143,7 +143,6 @@ include '../includes/head.php'?>
 									require '../controller/dbConfigue.php';
 									$dropdownQry = "SELECT * FROM categories WHERE active_status= 1";
 									$categoriesList = mysqli_query($conn, $dropdownQry);
-									$categoriesAssoc = mysqli_fetch_assoc($categoriesList);
 	
 									?>
 
@@ -153,12 +152,20 @@ include '../includes/head.php'?>
 		
 										<select id="category_id" name="category_id" class="form-control">
 				                                <option value=""> select Category</option>
-											<?php 
-											 foreach ($categoriesList as $key => $categorie) {	
-
-										     	?>
-								               <option value="<?php echo $categorie['id']; ?>"><?php echo $categorie['category_name']; ?></option>
-											<?php } ?>
+							    	<?php foreach ($categoriesList as $key => $categorie){
+										
+										if ($projectsResult['category_id']==$categorie['id']) {
+											$select = "Selected";
+										} else {
+											$select = "";
+										}
+										
+											
+								      echo "<option $select value='{$categorie['id']}'>{$categorie['category_name']}</option>";
+	
+	
+												
+												}?>
 
 										</select>
 										</div>

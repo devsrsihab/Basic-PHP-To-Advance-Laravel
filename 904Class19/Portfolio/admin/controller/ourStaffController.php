@@ -1,14 +1,14 @@
 <?php 
 // database connection Qury
   require 'dbConfigue.php';
-// this is for banner Create 
+// this is for staff Create 
 if (isset($_POST['CreateData'])) {
 
 
     // for image 
-    if(isset($_FILES['image'])){
+    if(isset($_FILES['staff_image'])){    
       $uploadStatus = false;
-      $mainArrImg = $_FILES['image'];
+      $mainArrImg = $_FILES['staff_image'];
       $file_name = $mainArrImg['name'];
       $file_temp_name = $mainArrImg['tmp_name'];
       $file_size = $mainArrImg['size'];
@@ -23,7 +23,7 @@ if (isset($_POST['CreateData'])) {
       $fileRandomName = time().'.'.$FileExtention;
       // condtional massage file extention
       if (in_array($FileExtention, $FileValidExt) ) {
-        move_uploaded_file($file_temp_name, '../uploads/bannerImages/' .$fileRandomName);
+        move_uploaded_file($file_temp_name, '../uploads/our_staff/'.$fileRandomName);
         $uploadStatus = true;
       } else {
         $massage = $FileExtention." is Not Allowed";
@@ -34,8 +34,8 @@ if (isset($_POST['CreateData'])) {
 
 
 
-      
-    $ourStaff_id    = $_POST['banner_id'];
+
+    $ourStaff_id    = $_POST['staff_id'];
     $staff_name     = $_POST['staff_name'];
     $designation_id = $_POST['designation_id'];
     $staff_image    = $_POST['staff_image'];
@@ -44,14 +44,14 @@ if (isset($_POST['CreateData'])) {
     $linkedin       = $_POST['linkedin'];
     $instagram      = $_POST['instagram'];
 
- if ( empty($staff_name) || empty($designation_id) || empty($staff_image) || empty($twitter) || empty($facebook) || empty($linkedin) || empty($instagram) || $uploadStatus== false   ) {
+ if ( empty($staff_name) || empty($designation_id) || empty($fileRandomName) || empty($twitter) || empty($facebook) || empty($linkedin) || empty($instagram) || $uploadStatus==false  ) {
     $massage = "All Field is Required";
     $alertCls = "alert-danger";
  } else {
    $isertQry = "INSERT INTO our_staff (staff_name,designation_id,staff_image,twitter,facebook,linkedin,instagram) VALUES ('{$staff_name}', '{$designation_id}', '{$staff_image}', '{$twitter}', '{$facebook}', '{$linkedin}' , '{$instagram}'  ) ";
-   $bannerInsert = mysqli_query($conn, $isertQry)  ;
+   $staffInsert = mysqli_query($conn, $isertQry)  ;
 
-   if ($bannerInsert) {
+   if ($staffInsert) {
     $massage = "Insert Successfully";
     $alertCls = "alert-success";
    } else {
@@ -61,16 +61,16 @@ if (isset($_POST['CreateData'])) {
    
  }
 //  Redirection
-header ("location: ../banner/bannerCreate.php?msg={$massage}&acls={$alertCls} ");
+header ("location: ../our_staff/ourStaffCreate.php?msg={$massage}&acls={$alertCls} ");
 
 }
 
 
-// this is for banner update
+// this is for staff update
 if (isset($_POST['UpdateData'])) {
 
       
-        $ourStaff_id    = $_POST['banner_id'];
+        $ourStaff_id    = $_POST['staff_id'];
         $staff_name     = $_POST['staff_name'];
         $designation_id = $_POST['designation_id'];
         $staff_image    = $_POST['staff_image'];
@@ -83,11 +83,11 @@ if (isset($_POST['UpdateData'])) {
     $massage = "All Field is Required";
     $alertCls = "alert-danger";
  } else {
-    $ourStaffUpdateQry = "UPDATE our_staff SET title='{$title}',sub_title='{$SubTitle}',details='{$details}',image='{$image}',active_status='{$activeStatus}' WHERE id = '{$ourStaff_id}' ";
+    $ourStaffUpdateQry = "UPDATE our_staff SET staff_name='{$staff_name}',designation_id='{$designation_id}',staff_image='{$staff_image}',twitter='{$twitter}',facebook='{$facebook}',linkedin='{$linkedin}',instagram='{$instagram}' WHERE id = '{$ourStaff_id}' ";
 
-   $bannerInsert = mysqli_query($conn, $ourStaffUpdateQry)  ;
+   $staffInsert = mysqli_query($conn, $ourStaffUpdateQry)  ;
 
-   if ($bannerInsert) {
+   if ($staffInsert) {
     $massage = "Insert Successfully";
     $alertCls = "alert-success";
    } else {
@@ -98,7 +98,7 @@ if (isset($_POST['UpdateData'])) {
  }
  
 //  Redirection
-header ("location: ../banner/bannerUpdate.php?msg={$massage}&acls={$alertCls}&id={$ourStaff_id } ");
+header ("location: ../our_staff/ourStaffUpdate.php?msg={$massage}&acls={$alertCls}&id={$ourStaff_id } ");
 
 }
 

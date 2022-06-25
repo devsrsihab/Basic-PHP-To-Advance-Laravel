@@ -78,7 +78,7 @@ require '../controller/dbConfigue.php';
 
 					<div class="breadcrumb-line">
 						<ul class="breadcrumb">
-							<li><a href="banner.php"><i class="icon-menu2 position-left"></i> Banner</a></li>
+							<li><a href="Clients.php"><i class="icon-menu2 position-left"></i> Clients</a></li>
 							<li class="active">List</li>
 						</ul>
 
@@ -94,10 +94,10 @@ require '../controller/dbConfigue.php';
 					<!-- Basic datatable -->
 					<div class="panel panel-flat">
 						<div class="panel-heading">
-							<h5 class="panel-title">Banner List</h5>
+							<h5 class="panel-title">Clients List</h5>
 							<div class="heading-elements">
 								<ul class="icons-list">
-									<li><a href="ourStaffCreate.php" class="btn btn-primary add_new">Add New</a></li>
+									<li><a href="ourClientsCreate.php" class="btn btn-primary add_new">Add New</a></li>
 			                		<li><a data-action="collapse"></a></li>
 			                		<li><a data-action="reload"></a></li>
 			                		<li><a data-action="close"></a></li>
@@ -118,37 +118,31 @@ require '../controller/dbConfigue.php';
 							<thead>
 								<tr>
 									<th>SL.</th>
-									<th>Staff Name</th>
+									<th>Clients Name</th>
 									<th>Designation</th>
-									<th>Staff image</th>
-									<th>Twitter</th>
-									<th>Facebook</th>
-									<th>Linkdin</th>
-									<th>Instagram</th>
+									<th>Clients images</th>
+									<th>Clients Reviews</th>
 									<th class="text-center">Actions</th>
 								</tr>
 							</thead>
 							<tbody>
 
 							<?php 
-							$SelectQry = "SELECT our_staff.*, designations.designation_name FROM our_staff INNER JOIN  designations ON our_staff.designation_id =designations.id WHERE our_staff.active_status = 1" ;
-							$staffList = mysqli_query($conn, $SelectQry);
-							foreach ($staffList as $key => $staff) {
+							$SelectQry = "SELECT our_clients.*, designations.designation_name FROM our_clients INNER JOIN  designations ON our_clients.designation_id =designations.id WHERE our_clients.active_status = 1" ;
+							$clientsList = mysqli_query($conn, $SelectQry);
+							foreach ($clientsList as $key => $client) {
 								
 						 
 						     	?>
 								<tr>
 									<td> <?php echo ++$key; ?> </td>
-									<td> <?php echo $staff['staff_name']; ?> </td>
-									<td> <?php echo $staff['designation_name']; ?> </td>
-									<td> <img  width="80" height="80" src="<?php echo '../uploads/bannerImages/'.$staff['staff_image']; ?>"/> </td>
-									<td> <?php echo $staff['twitter']; ?> </td>
-									<td> <?php echo $staff['facebook']; ?> </td>
-									<td> <?php echo $staff['linkedin']; ?> </td>
-									<td> <?php echo $staff['instagram']; ?> </td>
+									<td> <?php echo $client['clients_name']; ?> </td>
+									<td> <?php echo $client['designation_name']; ?> </td>
+									<td> <img  width="80" height="80" src="<?php echo '../uploads/clients/'.$client['client_image']; ?>"/> </td>
+									<td> <?php echo $client['client_review']; ?> </td>
 									<td class="text-center">
-							  <a href="ourStaffUpdate.php?id=<?php echo $staff['id']; ?>" class="ml-2 mr-2"><i class="icon-pencil5"></i></a>
-							  <a href="ourStaffDelete.php?id=<?php echo $staff['id']; ?>" class="ml-2 mr-2"><i class=" icon-trash"></i></a>
+							  <a href="ourClientsUpdate.php?id=<?php echo $client['id']; ?>" class="ml-2 mr-2"><i class="icon-pencil5"></i></a>
+							  <a href="ourClientsDelete.php?id=<?php echo $client['id']; ?>" class="ml-2 mr-2"><i class=" icon-trash"></i></a>
 									</td>
 								</tr>
 							<?php	} ?>

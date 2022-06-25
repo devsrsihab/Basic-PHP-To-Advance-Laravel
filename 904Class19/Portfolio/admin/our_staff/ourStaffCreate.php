@@ -122,12 +122,31 @@ include '../includes/head.php'
 											<input id="staff_name" name="staff_name" type="text" class="form-control">
 										</div>
 									</div>		
+
+									<?php
+									require '../controller/dbConfigue.php';
+									$designationsSQL = "SELECT * FROM designations WHERE active_status = 1";
+									$designationsResult = mysqli_query($conn, $designationsSQL) ;
+					
+									
+									?>
 									<div class="form-group">
-										<label class="control-label col-lg-2" for="designation_id"  >Designation</label>
-										<div class="col-lg-10">
-											<input id="designation_id" name="designation_id"  type="text" class="form-control">
-										</div>
-									</div>
+			                        	<label for="designation_id" class="control-label col-lg-2"> select Designation</label>
+			                        	<div class="col-lg-10">
+				                            <select id="designation_id" name="designation_id" class="form-control">
+				                                <option value=""> select Category</option>
+									   <?php 
+
+									  foreach ($designationsResult as $designation){
+										echo "<option value='{$designation['id']}'>{$designation['designation_name']}</option>";
+
+									  }
+								     	?>
+
+					
+				                            </select>
+			                            </div>
+			                        </div>	
 									<div class="form-group">
 										<label class="control-label col-lg-2" for="staff_image">Staff Image</label>
 										<div class="col-lg-10">

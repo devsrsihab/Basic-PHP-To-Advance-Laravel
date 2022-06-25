@@ -12,7 +12,8 @@
 
 				<li class=""> <a href="<?php echo $isInternalUrl == true ? '../our_project/' : 'our_project/' ?>projectsList.php"><i class=" icon-grid4"></i><span>Our Projects</span></a></li>
 				<li class=" "><a href="<?php echo $isInternalUrl == true ? '../our_staff/' : 'our_staff/' ?>ourStaffLIst.php"><i class="icon-users4"></i><span>Our Staff</span></a></li>
-				<li class=""><a href="index.html"><i class="icon-hour-glass3"></i><span>Our Clients</span></a></li>
+				<li class=""><a href="<?php echo $isInternalUrl == true ? '../our_clients/' : 'our_clients/'; ?>ourClientsLIst.php"><i class="icon-hour-glass3"></i><span>Our Clients</span></a></li>
+				<li class=" "><a href="<?php echo $isInternalUrl == true ? '../contact_us/' : 'contact_us/'; ?>contactUsLIst.php""><i class=" icon-bubble-notification"></i><span>Contact us</span></a></li>
 				<li class=" "><a href="index.html"><i class="icon-bubbles9"></i><span>Contact Message</span></a></li>
 				<li> <a href="#"><i class=" icon-gear"></i> <span>Back Office Setup</span></a>
 									<ul>

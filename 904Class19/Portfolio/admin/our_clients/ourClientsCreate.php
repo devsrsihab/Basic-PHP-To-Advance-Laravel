@@ -77,9 +77,9 @@ include '../includes/head.php'
 
 					<div class="breadcrumb-line">
 						<ul class="breadcrumb">
-							<li><a href="project.php"><i class="icon-menu2 position-left"></i> project</a></li>
+							<li><a href="banner.php"><i class="icon-menu2 position-left"></i> Clients</a></li>
 							<li class="">List</li>
-							<li class="active">Project Create</li>
+							<li class="active">Clients Create</li>
 						</ul>
 
 
@@ -94,10 +94,10 @@ include '../includes/head.php'
 					<!-- Basic datatable -->
 					<div class="panel panel-flat">
 						<div class="panel-heading mb-5" >
-							<h5 class="panel-title">Project Add Form</h5>
+							<h5 class="panel-title">Clients List</h5>
 							<div class="heading-elements">
 								<ul class="icons-list">
-									<li><a href="" class="btn btn-primary add_new">Add New</a></li>
+									<li><a href="ourClientsCreate.php" class="btn btn-primary add_new">Add New</a></li>
 			                		<li><a data-action="collapse"></a></li>
 			                		<li><a data-action="reload"></a></li>
 			                		<li><a data-action="close"></a></li>
@@ -113,56 +113,57 @@ include '../includes/head.php'
 						</div>
 				    	<?php } ?>
 						<div class="panel-body form_list_panel">
-						<form class="form-horizontal" action="../controller/projectsController.php" method="post" enctype="multipart/form-data" >
+						<form class="form-horizontal" action="../controller/clientsController.php" method="post" enctype="multipart/form-data"   >
 								<fieldset class="content-group">
 
 									<div class="form-group">
-										<label class="control-label col-lg-2" for="project_name"  >projects Name</label>
+										<label class="control-label col-lg-2" for="clients_name"  >Clients Name</label>
 										<div class="col-lg-10">
-											<input id="project_name" name="project_name" type="text" class="form-control">
+											<input id="clients_name" name="clients_name" type="text" class="form-control">
 										</div>
-									</div>	
+									</div>		
 
-									<!-- categroy query -->
-									<?php 
-									require "../controller/dbConfigue.php";
-									$dropdownQry = "SELECT * FROM categories WHERE active_status = 1 ";
-									$categorriesList = mysqli_query($conn, $dropdownQry);
+									<?php
+									require '../controller/dbConfigue.php';
+									$designationsSQL = "SELECT * FROM designations WHERE active_status = 1";
+									$designationsResult = mysqli_query($conn, $designationsSQL) ;
+					
+									
 									?>
 									<div class="form-group">
-			                        	<label for="category_id" class="control-label col-lg-2"> select Category</label>
+			                        	<label for="designation_id" class="control-label col-lg-2"> select Designation</label>
 			                        	<div class="col-lg-10">
-				                        <select id="category_id" name="category_id" class="form-control">
-				                        <option value=""> select Category</option>
-										<?php foreach ($categorriesList as $key => $categorie){
-											
-										echo "<option value='{$categorie['id']}'>{$categorie['category_name']}</option>";
+				                            <select id="designation_id" name="designation_id" class="form-control">
+				                                <option value=""> select Designation</option>
+									   <?php 
 
+									  foreach ($designationsResult as $designation){
+										echo "<option value='{$designation['id']}'>{$designation['designation_name']}</option>";
 
-											
-											}?>
-				                     
-						
+									  }
+								     	?>
+
+					
 				                            </select>
 			                            </div>
 			                        </div>	
 									<div class="form-group">
-										<label class="control-label col-lg-2" for="project_link">projects Link</label>
+										<label class="control-label col-lg-2" for="client_image">Clients Image</label>
 										<div class="col-lg-10">
-										<input id="project_link" name="project_link"  type="text" class="form-control">
+										<input id="client_image" name="client_image" type="file" class="form-control">
+									</div>
+									<div class="form-group ">
+										<label class="control-label col-lg-2" for="client_review"  >Clients Review</label>
+										<div class="col-lg-10">						
+											<textarea id="client_review" name="client_review" rows="5" cols="5" class="form-control" placeholder="Default textarea"></textarea>
 										</div>
 									</div>
-									<div class="form-group">
-										<label class="control-label col-lg-2" for="project_thumb">Project Thumbnail</label>
-										<div class="col-lg-10">
-											<input id="project_thumb" name="project_thumb" type="file" class="form-control">
-										</div>
-									</div>
+
 								</fieldset>
 
 								<div class="text-right">
-									<button type="submit" name="CreateData" class="btn btn-primary">Create <i class="icon-arrow-right14 position-right"></i></button>
-									<a href="projectsList.php"class="btn btn-warning">Back To Services List</i></a>
+									<button type="submit" name="CreateData" class="btn btn-primary">Submit <i class="icon-arrow-right14 position-right"></i></button>
+									<a href="ourClientsLIst.php"class="btn btn-warning">Back To Clients List</i></a>
 								</div>
 							</form>
 

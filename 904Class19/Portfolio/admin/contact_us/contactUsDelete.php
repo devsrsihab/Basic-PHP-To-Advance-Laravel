@@ -3,11 +3,11 @@
 require "../controller/dbConfigue.php";
 // this is for data update
       
-$staff_id = $_GET['id'];
+$baner_id = $_GET['id'];
 
-$staffDeletedQry = "UPDATE our_staff SET active_status=0 WHERE id = '{$staff_id}' ";
+$banerDeletedQry = "UPDATE banner SET active_status='{$activeStatus}' WHERE id = '{$baner_id}' ";
 
-$bannerInsert = mysqli_query($conn, $staffDeletedQry)  ;
+$bannerInsert = mysqli_query($conn, $banerDeletedQry)  ;
 
 if ($bannerInsert) {
 $massage = "Deleted Successfully";
@@ -21,7 +21,7 @@ $alertCls = "alert-danger";
 
 
 //  Redirection
-header ("location: ../our_staff/ourStaffList.php?msg={$massage}&acls={$alertCls} ");
+header ("location: ../banner/bannerList.php?msg={$massage}&acls={$alertCls} ");
 
 
 
