@@ -610,24 +610,192 @@
 
 </details><!-- class-12 overview end -->
 
-<!-- class-13 overview start -->
-### Class-13 Overview
+
+<!-- class-14 overview start -->
+### Class-14 Overview
 
 <details>
 
 <summary>Click Here</summary>
 
   1. ### Database
-  - What is Database?
-  - Data vs Information
-  - Example of a database
-  - How to create a database?
-  - Create a Table into a database
-  - Alter & Drop a Table
-  - Insert Single Data into a table
-  - Insert multiple Data into a table
-  - Update data from a table
-  - Delete data from a table
+  - Select, Where,
+  - Order by, And, Or, Not
+  - Max, Min, Count, Sum, Avg 
+  - Distinct, Limit
+  - Like, In, Between
 
-</details><!-- class-13 overview end -->
+</details><!-- class-14 overview end -->
+
+<!-- class-15 overview start -->
+### Class-15 Overview
+
+<details>
+
+<summary>Click Here</summary>
+
+  1. ### Database
+  - Left join
+  - Right join
+  - Inner join
+  - Relation
+  - Group By
+  - Having
+
+</details><!-- class-15 overview end -->
+
+
+<!-- class-16 overview start -->
+### Class-16 Overview
+
+<details>
+
+<summary>Click Here</summary>
+
+  1. ### Database Design
+  - Project plan & database design
+
+</details><!-- class-16 overview end -->
+
+
+<!-- class-17 overview start -->
+### Class-17 Overview
+
+<details>
+
+<summary>Click Here</summary>
+
+  1. ### Project Template
+  - Project Templateing
+
+</details><!-- class-17 overview end -->
+
+
+<!-- class-18 overview start -->
+### Class-18 Overview
+
+<details>
+
+<summary>Click Here</summary>
+
+  1. ### Project Day-2
+  - Project Day-2
+
+</details><!-- class-18 overview end -->
+
+
+<!-- class-19 overview start -->
+### Class-19 Overview
+
+<details>
+
+<summary>Click Here</summary>
+
+  1. ### Project  Day -3 
+  - CRUD of Banner Menu
+
+</details><!-- class-19 overview end -->
+
+
+<!-- class-20 overview start -->
+### Class-20 Overview
+
+<details>
+
+<summary>Click Here</summary>
+
+  1. ### Project Image upload
+  - Join Related Menu Crud
+
+</details><!-- class-20 overview end -->
+
+<!-- class-21 overview start -->
+### Class-21 Overview
+
+<details>
+
+<summary>Click Here</summary>
+
+  1. ### Project Day-5
+  - Project Day-5
+
+</details><!-- class-21 overview end -->
+
+
+<!-- class-22 overview start -->
+### Class-22 Overview
+
+<details>
+
+<summary>Click Here</summary>
+
+  1. ### Project Day-6
+  - Project - Error Solving and fetch data
+
+</details><!-- class-22 overview end -->
+
+<!-- class-23 overview start -->
+### Class-23 Overview
+
+<details>
+
+<summary>Click Here</summary>
+
+  1. ### Project Day-7
+  - Project Login
+
+</details><!-- class-23 overview end -->
+
+<!-- class-24 overview start -->
+### Class-24 Overview
+
+<details>
+
+<summary>Click Here</summary>
+
+  1. ### What is Javascript and JQuery
+  - What is JavaScript?
+  - What is JQuery?
+
+
+</details><!-- class-24 overview end -->
+
+<!-- class-25 overview start -->
+### Class-25 Overview
+
+<details>
+
+<summary>Click Here</summary>
+
+  1. ###  JQuery Events
+  - Selector, event
+  - event fired
+  - event get attribute val
+  - selector: class,id,element
+  - form submit event
+  - form submit and get form data in two ways
+  - on change event for option
+  - conditional field rendering: hide / show
+
+
+</details><!-- class-25 overview end -->
+
+<!-- class-26 overview start -->
+### Class-26 Overview
+
+<details>
+
+<summary>Click Here</summary>
+
+  1. ### OOP(Object Orientetion Programming)
+  - Class
+  - Proerty
+  - Methods
+  - This Keyword
+  - Object
+  - Access Properties and Methods Class Using Object
+  - Constractor Methods
+
+
+</details><!-- class-26 overview end -->
 
