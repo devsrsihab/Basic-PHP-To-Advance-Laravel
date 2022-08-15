@@ -34,7 +34,7 @@
 									class="icon-comment-discussion"></i> Messages</a></li>
 						<li class="divider"></li>
 						<li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-						<li><a href="../includes/logout.php"><i class="icon-switch2"></i> Logout</a></li>
+						<li><a href="includes/logout.php"><i class="icon-switch2"></i> Logout</a></li>
 					</ul>
 				</li>
 			</ul>
